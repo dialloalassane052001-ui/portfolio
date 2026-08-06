@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Moussa Diallo — Ingénieur Mathématiques Appliquées</title>
+<meta name="description" content="Portfolio de Moussa Diallo, ingénieur en mathématiques appliquées : modélisation, calcul scientifique, statistiques et data science.">
+<style>
+  :root{
+    --navy:#10263f; --navy2:#1b3a5c; --blue:#1b7fd4; --blue-light:#4da3ff;
+    --bg:#f5f8fc; --card:#ffffff; --text:#2b2b2b; --muted:#5a6b7d;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:"Segoe UI",system-ui,-apple-system,Roboto,Arial,sans-serif;
+    color:var(--text); background:var(--bg); line-height:1.6;
+  }
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1000px;margin:0 auto;padding:0 24px}
+  section{padding:64px 0}
+  h2{
+    font-size:1.7rem;color:var(--navy);margin-bottom:8px;
+    display:inline-block;position:relative;
+  }
+  h2::after{content:"";display:block;width:52px;height:4px;background:var(--blue);border-radius:2px;margin-top:8px}
+  .lead{color:var(--muted);margin-bottom:28px;max-width:640px}
+
+  /* ===== NAV ===== */
+  nav{
+    position:sticky;top:0;z-index:50;background:rgba(16,38,63,.97);
+    backdrop-filter:blur(6px);
+  }
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+  nav .brand{color:#fff;font-weight:800;letter-spacing:.5px}
+  nav .links{display:flex;gap:22px}
+  nav .links a{color:#cdddf0;font-size:.92rem;font-weight:600;transition:color .2s}
+  nav .links a:hover{color:var(--blue-light)}
+  @media(max-width:640px){nav .links{display:none}}
+
+  /* ===== HERO ===== */
+  .hero{
+    background:linear-gradient(135deg,var(--navy) 0%,var(--navy2) 100%);
+    color:#eaf0f7;padding:70px 0 80px;
+  }
+  .hero .wrap{display:flex;align-items:center;gap:46px;flex-wrap:wrap}
+  .hero .photo{
+    width:190px;height:190px;border-radius:50%;object-fit:cover;object-position:50% 30%;
+    border:5px solid var(--blue-light);box-shadow:0 12px 40px rgba(0,0,0,.35);flex-shrink:0;
+  }
+  .hero .intro{flex:1;min-width:280px}
+  .hero h1{font-size:2.6rem;font-weight:800;line-height:1.1;color:#fff}
+  .hero .role{color:var(--blue-light);font-weight:700;font-size:1.15rem;margin:10px 0 14px;text-transform:uppercase;letter-spacing:.5px}
+  .hero p{color:#cdddf0;max-width:540px}
+  .hero .badges{margin-top:18px;display:flex;gap:10px;flex-wrap:wrap}
+  .hero .badges span{background:rgba(77,163,255,.15);border:1px solid #35577f;color:#eaf0f7;padding:5px 13px;border-radius:20px;font-size:.85rem;font-weight:600}
+  .cta{margin-top:24px;display:flex;gap:12px;flex-wrap:wrap}
+  .btn{
+    padding:11px 22px;border-radius:8px;font-weight:700;font-size:.92rem;transition:transform .15s,box-shadow .15s;
+    display:inline-block;
+  }
+  .btn:hover{transform:translateY(-2px)}
+  .btn-primary{background:var(--blue);color:#fff;box-shadow:0 6px 18px rgba(27,127,212,.4)}
+  .btn-ghost{border:1.5px solid var(--blue-light);color:var(--blue-light)}
+
+  /* ===== CARDS / GRIDS ===== */
+  .grid{display:grid;gap:20px}
+  .cols-3{grid-template-columns:repeat(3,1fr)}
+  .cols-2{grid-template-columns:repeat(2,1fr)}
+  @media(max-width:760px){.cols-3,.cols-2{grid-template-columns:1fr}}
+  .card{
+    background:var(--card);border-radius:12px;padding:22px 24px;
+    box-shadow:0 4px 18px rgba(16,38,63,.06);border:1px solid #e6eef7;
+  }
+  .card h3{color:var(--navy);font-size:1.05rem;margin-bottom:4px}
+  .card .sub{color:var(--blue);font-weight:600;font-size:.88rem;margin-bottom:8px}
+  .card ul{margin:8px 0 0 18px;color:var(--muted);font-size:.93rem}
+  .card ul li{margin-bottom:4px}
+  .stack{margin-top:10px;font-size:.82rem;color:var(--blue);font-weight:600}
+
+  .skill-cat h3{color:var(--navy);font-size:1rem;margin-bottom:10px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px}
+  .chips span{background:#eaf2fb;color:var(--navy);border:1px solid #d3e4f6;padding:5px 12px;border-radius:16px;font-size:.83rem;font-weight:600}
+
+  /* ===== TIMELINE ===== */
+  .exp-item{position:relative;padding-left:26px;margin-bottom:24px}
+  .exp-item::before{content:"";position:absolute;left:0;top:6px;width:12px;height:12px;border-radius:50%;background:var(--blue);box-shadow:0 0 0 4px rgba(27,127,212,.15)}
+  .exp-item::after{content:"";position:absolute;left:5px;top:20px;bottom:-24px;width:2px;background:#dbe7f4}
+  .exp-item:last-child::after{display:none}
+  .exp-date{color:var(--blue);font-weight:700;font-size:.85rem}
+  .exp-item h3{color:var(--navy);font-size:1.08rem;margin:2px 0}
+  .exp-org{color:var(--muted);font-style:italic;font-size:.9rem;margin-bottom:6px}
+  .exp-item p{color:var(--muted);font-size:.93rem}
+
+  /* ===== CONTACT ===== */
+  .contact{background:var(--navy);color:#eaf0f7}
+  .contact h2{color:#fff}
+  .contact h2::after{background:var(--blue-light)}
+  .contact .lead{color:#cdddf0}
+  .contact-grid{display:flex;flex-wrap:wrap;gap:16px;margin-top:10px}
+  .contact-grid a{
+    background:rgba(255,255,255,.06);border:1px solid #35577f;padding:12px 18px;border-radius:10px;
+    font-weight:600;font-size:.92rem;transition:background .2s;
+  }
+  .contact-grid a:hover{background:rgba(77,163,255,.18)}
+  footer{background:#0b1e33;color:#8ba6c4;text-align:center;padding:22px;font-size:.85rem}
+</style>
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<nav>
+  <div class="wrap">
+    <div class="brand">Moussa Diallo</div>
+    <div class="links">
+      <a href="#about">À propos</a>
+      <a href="#skills">Compétences</a>
+      <a href="#experience">Expériences</a>
+      <a href="#projects">Projets</a>
+      <a href="#education">Formation</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<header class="hero">
+  <div class="wrap">
+    <img src="photo.png" alt="Moussa Diallo" class="photo">
+    <div class="intro">
+      <h1>Moussa Diallo</h1>
+      <div class="role">Ingénieur Mathématiques Appliquées</div>
+      <p>Modélisation, calcul scientifique, statistiques &amp; data science. Je transforme des problèmes concrets en modèles quantitatifs fiables.</p>
+      <div class="badges">
+        <span>📍 Toulouse — mobile en France</span>
+        <span>🎓 Diplômé M2 en oct. 2026</span>
+        <span>💼 Ouvert au CDI / CDD</span>
+      </div>
+      <div class="cta">
+        <a class="btn btn-primary" href="mailto:diallomoussa052001@gmail.com">Me contacter</a>
+        <a class="btn btn-ghost" href="CV_Moussa_Diallo.pdf" target="_blank">Télécharger mon CV</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ===== À PROPOS ===== -->
+<section id="about">
+  <div class="wrap">
+    <h2>À propos</h2>
+    <p class="lead">Diplômé en octobre 2026 du Master Mathématiques Appliquées (MApI3) à l'Université Toulouse III – Paul Sabatier.</p>
+    <p style="max-width:760px;color:var(--muted)">
+      Je conçois des modèles quantitatifs pour résoudre des problèmes concrets : modélisation et simulation numérique,
+      méthodes numériques (EDP), optimisation, statistiques et analyse d'incertitude, ainsi que data science et machine learning.
+      J'ai éprouvé ces compétences lors de deux expériences en laboratoire de recherche, où j'ai construit des chaînes de
+      traitement complètes — de la donnée brute au modèle validé. Rigueur scientifique, autonomie et restitution claire des
+      résultats me caractérisent. Je recherche un poste en ingénierie scientifique, R&amp;D, études ou data, partout en France.
+    </p>
+  </div>
+</section>
+
+<!-- ===== COMPÉTENCES ===== -->
+<section id="skills" style="background:#eef4fb">
+  <div class="wrap">
+    <h2>Compétences</h2>
+    <div class="grid cols-3" style="margin-top:26px">
+      <div class="skill-cat">
+        <h3>Modélisation &amp; calcul</h3>
+        <div class="chips">
+          <span>Modélisation numérique</span><span>Simulation</span><span>Méthodes numériques</span>
+          <span>EDP</span><span>Optimisation</span><span>Recherche opérationnelle</span><span>Calcul scientifique</span>
+        </div>
+      </div>
+      <div class="skill-cat">
+        <h3>Statistiques &amp; data</h3>
+        <div class="chips">
+          <span>Statistiques</span><span>Analyse d'incertitude</span><span>Monte-Carlo</span><span>Bootstrap</span>
+          <span>Machine learning</span><span>Deep learning</span><span>Traitement d'images</span>
+        </div>
+      </div>
+      <div class="skill-cat">
+        <h3>Outils</h3>
+        <div class="chips">
+          <span>Python</span><span>scikit-learn</span><span>PyTorch</span><span>pandas / NumPy</span>
+          <span>MATLAB</span><span>SQL</span><span>Git / GitHub</span><span>LaTeX</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== EXPÉRIENCES ===== -->
+<section id="experience">
+  <div class="wrap">
+    <h2>Expériences</h2>
+    <div style="margin-top:26px">
+      <div class="exp-item">
+        <div class="exp-date">2026 · 4 mois</div>
+        <h3>Ingénieur R&amp;D — Stage de fin d'études</h3>
+        <div class="exp-org">Laboratoire L2MGC — CY Cergy Paris Université</div>
+        <p>Conception d'un modèle prédictif multimodal reliant la microstructure d'un matériau à ses propriétés mécaniques,
+        à partir de trois sources de données hétérogènes (mesures, images microscopiques, descripteurs chimiques). Conception
+        de la base de données du projet, prétraitement, modélisation, validation croisée et restitution aux chercheurs.
+        Livrable : un cadre de prédiction réutilisable pour les futures campagnes d'essais.</p>
+        <div class="stack">Python · scikit-learn · PyTorch · pandas · SQL</div>
+      </div>
+      <div class="exp-item">
+        <div class="exp-date">Été 2024</div>
+        <h3>Stagiaire R&amp;D — Analyse de modèles de traitement d'images</h3>
+        <div class="exp-org">Laboratoire IRIT — Université de Toulouse</div>
+        <p>Développement d'outils d'analyse et d'interprétabilité de modèles de vision par ordinateur (cartes d'activation,
+        importance des variables), un enjeu clé de fiabilité et de confiance des modèles. Création de tableaux de bord
+        interactifs de classification d'images pour les équipes de recherche.</p>
+        <div class="stack">Python · PyTorch · NumPy · Matplotlib</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROJETS ===== -->
+<section id="projects" style="background:#eef4fb">
+  <div class="wrap">
+    <h2>Projets</h2>
+    <div class="grid cols-2" style="margin-top:26px">
+      <div class="card">
+        <h3>Modélisation de séries temporelles &amp; prévision</h3>
+        <div class="sub">2025</div>
+        <p style="color:var(--muted);font-size:.93rem">Implémentation et benchmark de modèles (RNN, LSTM, GRU) pour la
+        prévision de séries temporelles, dont des séries financières, et la génération de séquences.</p>
+      </div>
+      <div class="card">
+        <h3>Reconstruction d'images &amp; analyse sous incertitude</h3>
+        <div class="sub">2025</div>
+        <p style="color:var(--muted);font-size:.93rem">Reconstruction d'images couleur (capteur de Bayer) évaluée par les
+        métriques PSNR/SSIM ; étude de la robustesse statistique par simulations de Monte-Carlo et bootstrap.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FORMATION ===== -->
+<section id="education">
+  <div class="wrap">
+    <h2>Formation</h2>
+    <div class="grid cols-2" style="margin-top:26px">
+      <div class="card">
+        <div class="sub">2024 – 2026</div>
+        <h3>Master Mathématiques Appliquées — MApI3</h3>
+        <p style="color:var(--muted);font-size:.92rem;margin:6px 0">Université Toulouse III – Paul Sabatier · diplôme prévu en octobre 2026</p>
+        <ul>
+          <li>Méthodes numériques (EDP), optimisation, Monte-Carlo</li>
+          <li>Plans d'expériences &amp; analyse d'incertitude, statistiques</li>
+          <li>Recherche opérationnelle, traitement du signal et de l'image</li>
+          <li>Machine learning &amp; big data</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="sub">2020 – 2023</div>
+        <h3>Licence de Mathématiques — CUPGE</h3>
+        <p style="color:var(--muted);font-size:.92rem;margin:6px 0">Université Toulouse III – Paul Sabatier</p>
+        <ul>
+          <li>Formation mathématique fondamentale</li>
+          <li>Programmation scientifique (Python, MATLAB)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact" class="contact">
+  <div class="wrap">
+    <h2>Contact</h2>
+    <p class="lead">Disponible en CDI ou CDD, partout en France. N'hésitez pas à me contacter.</p>
+    <div class="contact-grid">
+      <a href="mailto:diallomoussa052001@gmail.com">✉️ diallomoussa052001@gmail.com</a>
+      <a href="tel:+33749655327">📞 07 49 65 53 27</a>
+      <a href="https://github.com/dialloalassane052001-ui" target="_blank">💻 GitHub</a>
+      <!-- Quand ton LinkedIn sera créé, remplace le lien ci-dessous : -->
+      <a href="#" target="_blank">🔗 LinkedIn</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2026 Moussa Diallo — Ingénieur Mathématiques Appliquées · Toulouse, France
+</footer>
+
+</body>
+</html>
