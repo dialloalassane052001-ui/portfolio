@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dialloalassane052001-ui.github.io/portfolio/sitemap.xml
