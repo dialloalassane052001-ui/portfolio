@@ -2,10 +2,11 @@
 <html lang="fr" data-theme="light">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Moussa Diallo — Data Science, Data Analysis, Data Engineering & Calcul scientifique</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Moussa Diallo — Data Scientist, Data Analyst, Data Engineer & Calcul Scientifique</title>
 <meta name="description" content="Moussa Diallo, Master 2 Mathématiques Appliquées (Toulouse III). Profils Data Scientist, Data Analyst, Data Engineer et ingénieur calcul scientifique. Python, SQL, machine learning, méthodes numériques.">
 <meta name="author" content="Moussa Diallo">
+<meta name="theme-color" content="#faf8f5">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <link rel="canonical" href="https://dialloalassane052001-ui.github.io/portfolio/">
 
@@ -219,6 +220,8 @@ section{padding:88px 0;scroll-margin-top:72px}
     transform:translateY(-12px);
     opacity:0;pointer-events:none;
     transition:opacity .22s var(--ease), transform .22s var(--ease);
+    max-height:calc(100vh - 60px);
+    overflow-y:auto;
   }
   .nav-links.open{opacity:1;transform:translateY(0);pointer-events:auto}
   .nav-links a{font-size:.95rem;padding:12px 14px}
@@ -256,7 +259,7 @@ section{padding:88px 0;scroll-margin-top:72px}
   gap:44px;
   align-items:start;
 }
-@media(max-width:760px){.hero-grid{grid-template-columns:1fr;gap:28px}}
+@media(max-width:760px){.hero-grid{grid-template-columns:1fr;gap:28px;justify-items:center;text-align:center}}
 
 .frame{position:relative;width:148px;height:148px;flex-shrink:0}
 .frame::before{
@@ -325,6 +328,8 @@ section{padding:88px 0;scroll-margin-top:72px}
 .hero-role .sep{color:var(--ink-faint);margin:0 8px;font-weight:400}
 
 .hero-tagline{max-width:600px;margin-top:20px;font-size:1.03rem;line-height:1.7}
+@media(max-width:760px){.hero-tagline{margin-left:auto;margin-right:auto}}
+
 .hero-meta{
   margin-top:16px;
   font-family:var(--font-mono);
@@ -333,8 +338,10 @@ section{padding:88px 0;scroll-margin-top:72px}
   color:var(--ink-faint);
   display:flex;flex-wrap:wrap;gap:6px 16px;
 }
+@media(max-width:760px){.hero-meta{justify-content:center}}
 
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+@media(max-width:760px){.chips{justify-content:center}}
 .chip{
   font-size:.79rem;font-weight:500;
   padding:6px 12px;border-radius:999px;
@@ -393,6 +400,7 @@ section{padding:88px 0;scroll-margin-top:72px}
 }
 
 .hero-cta{margin-top:30px;display:flex;gap:10px;flex-wrap:wrap}
+@media(max-width:760px){.hero-cta{justify-content:center}}
 .btn{
   display:inline-flex;align-items:center;gap:8px;
   padding:11px 20px;
@@ -1325,6 +1333,8 @@ html.js .reveal.in{opacity:1;transform:none}
   function applyTheme(t){
     doc.setAttribute('data-theme', t);
     iconSun.innerHTML = (t === 'dark') ? sunPath : moonPath;
+    var meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.setAttribute('content', t === 'dark' ? '#14110e' : '#faf8f5');
     try { localStorage.setItem('theme', t); } catch(e){}
   }
 
@@ -1351,6 +1361,7 @@ html.js .reveal.in{opacity:1;transform:none}
     if (e.target.tagName === 'A' && window.innerWidth <= 900){
       navLinks.classList.remove('open');
       menuBtn.setAttribute('aria-expanded','false');
+      menuBtn.setAttribute('aria-label','Ouvrir le menu');
     }
   });
 
