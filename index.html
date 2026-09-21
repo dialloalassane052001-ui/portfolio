@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Moussa Diallo — Data Scientist, Data Analyst, Data Engineer & Calcul Scientifique</title>
-<meta name="description" content="Moussa Diallo, Master 2 Mathématiques Appliquées (MApI3, Université Toulouse III). Profils Data Scientist, Data Analyst, Data Engineer et ingénieur calcul scientifique. Python, SQL, machine learning, méthodes numériques.">
+<title>Moussa Diallo — Mathématiques appliquées, Données & Calcul scientifique</title>
+<meta name="description" content="Moussa Diallo, Master 2 Mathématiques Appliquées (MApI3, Université Toulouse III). Data Scientist, Data Analyst, Data Engineer et ingénieur calcul scientifique.">
 <meta name="author" content="Moussa Diallo">
 <meta name="theme-color" content="#faf8f5">
 <meta name="robots" content="index, follow, max-image-preview:large">
@@ -13,8 +13,8 @@
 <meta property="og:type" content="profile">
 <meta property="og:locale" content="fr_FR">
 <meta property="og:site_name" content="Moussa Diallo · Portfolio">
-<meta property="og:title" content="Moussa Diallo · Données, modèles et calcul scientifique">
-<meta property="og:description" content="Master 2 Mathématiques Appliquées (MApI3, Université Toulouse III). Data Scientist, Data Analyst, Data Engineer ou ingénieur calcul scientifique, en CDI ou CDD, partout en France.">
+<meta property="og:title" content="Moussa Diallo — Mathématiques appliquées, Données & Calcul scientifique">
+<meta property="og:description" content="Master 2 Mathématiques Appliquées (MApI3, Université Toulouse III).">
 <meta property="og:url" content="https://dialloalassane052001-ui.github.io/portfolio/">
 <meta property="og:image" content="https://dialloalassane052001-ui.github.io/portfolio/og-image.jpg">
 <meta property="og:image:width" content="1200">
@@ -30,7 +30,7 @@
   "@type": "Person",
   "name": "Moussa Diallo",
   "jobTitle": "Data Scientist junior",
-  "description": "Master 2 Mathématiques Appliquées (MApI3) de l'Université Toulouse III Paul Sabatier, validé avec attestation de réussite. Diplôme officiel en décembre 2026.",
+  "description": "Master 2 Mathématiques Appliquées (MApI3) de l'Université Toulouse III Paul Sabatier.",
   "url": "https://dialloalassane052001-ui.github.io/portfolio/",
   "image": "https://dialloalassane052001-ui.github.io/portfolio/photo.jpg",
   "email": "mailto:diallomoussa052001@gmail.com",
@@ -82,8 +82,8 @@
 
   --measure:760px;
   --wide:1080px;
-  --radius:14px;
-  --radius-sm:9px;
+  --radius:16px;
+  --radius-sm:10px;
 
   --ease:cubic-bezier(.22,.61,.36,1);
 }
@@ -136,14 +136,14 @@ button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
 ::selection{background:var(--ink);color:var(--paper)}
 
 h1,h2,h3,h4{font-family:var(--font-display);font-weight:600;letter-spacing:-.02em;line-height:1.18}
-h2{font-size:clamp(1.5rem,3.2vw,1.85rem)}
+h2{font-size:clamp(1.6rem,3.6vw,2.1rem);letter-spacing:-.025em}
 h3{font-size:1.05rem;letter-spacing:-.01em}
 p{color:var(--ink-soft)}
 
 .wrap{max-width:var(--wide);margin:0 auto;padding:0 24px}
 .measure{max-width:var(--measure);margin:0 auto;padding:0 24px}
 
-section{padding:88px 0;scroll-margin-top:72px}
+section{padding:96px 0;scroll-margin-top:72px}
 .rule{border-top:1px solid var(--line)}
 
 :focus-visible{outline:2px solid var(--calc);outline-offset:3px;border-radius:3px}
@@ -161,15 +161,15 @@ section{padding:88px 0;scroll-margin-top:72px}
 }
 .nav-inner{
   display:flex;align-items:center;justify-content:space-between;
-  height:60px;gap:16px;
+  height:64px;gap:16px;
 }
 .brand{display:flex;align-items:center;gap:10px;font-family:var(--font-display);font-weight:600;font-size:.95rem;letter-spacing:-.01em}
 .brand-mark{
   display:grid;place-items:center;
-  width:30px;height:30px;flex-shrink:0;
+  width:32px;height:32px;flex-shrink:0;
   border:1.5px solid var(--ink);
-  border-radius:7px;
-  font-size:.68rem;font-weight:700;letter-spacing:.02em;
+  border-radius:8px;
+  font-size:.7rem;font-weight:700;letter-spacing:.02em;
   background:var(--ink);color:var(--paper);
   transition:transform .3s var(--ease);
 }
@@ -211,7 +211,7 @@ section{padding:88px 0;scroll-margin-top:72px}
 
 @media(max-width:900px){
   .nav-links{
-    position:fixed;inset:60px 0 auto 0;
+    position:fixed;inset:64px 0 auto 0;
     flex-direction:column;align-items:stretch;gap:2px;
     background:var(--card);
     border-bottom:1px solid var(--line);
@@ -220,7 +220,7 @@ section{padding:88px 0;scroll-margin-top:72px}
     transform:translateY(-12px);
     opacity:0;pointer-events:none;
     transition:opacity .22s var(--ease), transform .22s var(--ease);
-    max-height:calc(100vh - 60px);
+    max-height:calc(100vh - 64px);
     overflow-y:auto;
   }
   .nav-links.open{opacity:1;transform:translateY(0);pointer-events:auto}
@@ -233,40 +233,40 @@ section{padding:88px 0;scroll-margin-top:72px}
 /* ============================================================
    HERO
    ============================================================ */
-.hero{position:relative;padding:80px 0 72px;overflow:hidden}
+.hero{position:relative;padding:88px 0 96px;overflow:hidden}
 .hero::before{
   content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
   background-image:
     linear-gradient(var(--line) 1px, transparent 1px),
     linear-gradient(90deg, var(--line) 1px, transparent 1px);
-  background-size:38px 38px;
-  -webkit-mask-image:radial-gradient(ellipse 85% 65% at 50% 0%, #000 15%, transparent 78%);
-          mask-image:radial-gradient(ellipse 85% 65% at 50% 0%, #000 15%, transparent 78%);
-  opacity:.85;
+  background-size:42px 42px;
+  -webkit-mask-image:radial-gradient(ellipse 90% 70% at 50% 0%, #000 10%, transparent 80%);
+          mask-image:radial-gradient(ellipse 90% 70% at 50% 0%, #000 10%, transparent 80%);
+  opacity:.9;
 }
 .hero::after{
   content:"";position:absolute;z-index:0;pointer-events:none;
-  top:-240px;left:50%;transform:translateX(-50%);
-  width:min(900px,110vw);height:520px;
-  background:radial-gradient(circle at 50% 50%, var(--calc-soft), transparent 62%);
-  opacity:.9;
+  top:-280px;left:50%;transform:translateX(-50%);
+  width:min(1000px,120vw);height:600px;
+  background:radial-gradient(circle at 50% 50%, var(--calc-soft), transparent 60%);
+  opacity:1;
 }
 .hero .wrap{position:relative;z-index:1}
 
 .hero-grid{
   display:grid;
   grid-template-columns:auto 1fr;
-  gap:44px;
+  gap:52px;
   align-items:start;
 }
-@media(max-width:760px){.hero-grid{grid-template-columns:1fr;gap:28px;justify-items:center;text-align:center}}
+@media(max-width:820px){.hero-grid{grid-template-columns:1fr;gap:32px;justify-items:center;text-align:center}}
 
-.frame{position:relative;width:148px;height:148px;flex-shrink:0}
+.frame{position:relative;width:168px;height:168px;flex-shrink:0}
 .frame::before{
   content:"";position:absolute;inset:0;
   border:1.5px solid var(--ink);
   border-radius:var(--radius);
-  transform:translate(7px,7px);
+  transform:translate(8px,8px);
   transition:transform .45s var(--ease);
   z-index:0;
 }
@@ -279,25 +279,25 @@ section{padding:88px 0;scroll-margin-top:72px}
   background:var(--paper-2);
 }
 .frame .tick{
-  position:absolute;width:9px;height:9px;
+  position:absolute;width:10px;height:10px;
   border:1.5px solid var(--ink);z-index:2;
   border-radius:1px;
 }
-.frame .tick.tl{top:-5px;left:-5px;border-right:none;border-bottom:none}
-.frame .tick.tr{top:-5px;right:-5px;border-left:none;border-bottom:none}
-.frame .tick.bl{bottom:-5px;left:-5px;border-right:none;border-top:none}
-.frame .tick.br{bottom:-5px;right:-5px;border-left:none;border-top:none}
+.frame .tick.tl{top:-6px;left:-6px;border-right:none;border-bottom:none}
+.frame .tick.tr{top:-6px;right:-6px;border-left:none;border-bottom:none}
+.frame .tick.bl{bottom:-6px;left:-6px;border-right:none;border-top:none}
+.frame .tick.br{bottom:-6px;right:-6px;border-left:none;border-top:none}
 
 .status{
   display:inline-flex;align-items:center;gap:8px;
   font-family:var(--font-mono);font-size:.72rem;
   letter-spacing:.02em;text-transform:uppercase;
   color:var(--ink-soft);
-  padding:5px 11px 5px 9px;
+  padding:6px 12px 6px 10px;
   border:1px solid var(--line);
   border-radius:999px;
   background:var(--card);
-  margin-bottom:20px;
+  margin-bottom:24px;
 }
 .status .pulse{
   width:7px;height:7px;border-radius:50%;
@@ -313,97 +313,81 @@ section{padding:88px 0;scroll-margin-top:72px}
 }
 
 .hero h1{
-  font-size:clamp(2.3rem,6vw,3.4rem);
-  line-height:1.02;
-  letter-spacing:-.035em;
+  font-size:clamp(2.6rem,7vw,4rem);
+  line-height:1;
+  letter-spacing:-.04em;
   font-weight:700;
 }
 .hero-role{
   font-family:var(--font-display);
-  font-size:clamp(.98rem,2vw,1.12rem);
-  color:var(--ink-soft);
-  margin-top:12px;
+  font-size:clamp(1.1rem,2.4vw,1.35rem);
+  color:var(--ink);
+  margin-top:20px;
   font-weight:500;
+  letter-spacing:-.015em;
+  max-width:560px;
 }
-.hero-role .sep{color:var(--ink-faint);margin:0 8px;font-weight:400}
+@media(max-width:820px){.hero-role{margin-left:auto;margin-right:auto}}
 
-.hero-tagline{max-width:600px;margin-top:20px;font-size:1.03rem;line-height:1.7}
-@media(max-width:760px){.hero-tagline{margin-left:auto;margin-right:auto}}
+.hero-tagline{max-width:580px;margin-top:18px;font-size:1.02rem;line-height:1.7}
+@media(max-width:820px){.hero-tagline{margin-left:auto;margin-right:auto}}
 
 .hero-meta{
-  margin-top:16px;
+  margin-top:22px;
   font-family:var(--font-mono);
   font-size:.76rem;
   letter-spacing:.01em;
   color:var(--ink-faint);
-  display:flex;flex-wrap:wrap;gap:6px 16px;
+  display:flex;flex-wrap:wrap;gap:6px 18px;
 }
-@media(max-width:760px){.hero-meta{justify-content:center}}
+@media(max-width:820px){.hero-meta{justify-content:center}}
+.hero-meta span{display:inline-flex;align-items:center;gap:6px}
 
-.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
-@media(max-width:760px){.chips{justify-content:center}}
-.chip{
-  font-size:.79rem;font-weight:500;
-  padding:6px 12px;border-radius:999px;
-  border:1px solid var(--line);
+.hero-stats{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+  margin-top:36px;
+  max-width:640px;
+}
+@media(max-width:820px){.hero-stats{grid-template-columns:1fr;margin-left:auto;margin-right:auto}}
+@media(min-width:481px) and (max-width:820px){.hero-stats{grid-template-columns:repeat(3,1fr)}}
+
+.stat{
   background:var(--card);
-  color:var(--ink-soft);
-  transition:border-color .2s, color .2s, transform .2s;
+  border:1px solid var(--line);
+  border-radius:var(--radius-sm);
+  padding:18px 20px;
+  transition:border-color .25s var(--ease), transform .25s var(--ease), box-shadow .25s var(--ease);
 }
-.chip:hover{border-color:var(--line-strong);color:var(--ink);transform:translateY(-1px)}
-.chip strong{color:var(--ink);font-weight:600}
-
-/* ============================================================
-   LENS
-   ============================================================ */
-.lens{margin-top:34px}
-.lens-label{
-  font-family:var(--font-mono);
-  font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;
-  color:var(--ink-faint);margin-bottom:12px;
+.stat:hover{border-color:var(--line-strong);transform:translateY(-2px);box-shadow:var(--shadow-sm)}
+.stat-value{
+  font-family:var(--font-display);
+  font-size:1.5rem;
+  font-weight:700;
+  color:var(--ink);
+  letter-spacing:-.02em;
+  line-height:1.1;
 }
-.lens-tabs{
-  display:flex;gap:2px;flex-wrap:wrap;
-  border-bottom:1px solid var(--line);
-  padding-bottom:0;
+.stat-label{
+  font-size:.84rem;
+  font-weight:600;
+  color:var(--ink);
+  margin-top:6px;
+  letter-spacing:-.005em;
 }
-.lens-tabs button{
-  position:relative;
-  padding:10px 2px 12px;
-  margin-right:24px;
-  font-size:.9rem;
-  color:var(--ink-soft);
-  transition:color .2s;
-  white-space:nowrap;
-}
-.lens-tabs button::after{
-  content:"";position:absolute;left:0;right:0;bottom:-1px;
-  height:2px;border-radius:2px 2px 0 0;
-  background:transparent;
-  transform:scaleX(0);
-  transition:transform .28s var(--ease), background .2s;
-  transform-origin:left;
-}
-.lens-tabs button:hover{color:var(--ink)}
-.lens-tabs button[aria-selected="true"]{color:var(--ink);font-weight:600}
-.lens-tabs button[aria-selected="true"]::after{transform:scaleX(1)}
-.lens-tabs button[data-lens="ds"][aria-selected="true"]::after{background:var(--ds)}
-.lens-tabs button[data-lens="de"][aria-selected="true"]::after{background:var(--de)}
-.lens-tabs button[data-lens="calc"][aria-selected="true"]::after{background:var(--calc)}
-.lens-tabs button[data-lens="analyst"][aria-selected="true"]::after{background:var(--analyst)}
-.lens-tabs button[data-lens="all"][aria-selected="true"]::after{background:var(--ink)}
-
-@media(max-width:640px){
-  .lens-tabs{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
-  .lens-tabs::-webkit-scrollbar{display:none}
-  .lens-tabs button{margin-right:18px;font-size:.85rem}
+.stat-context{
+  font-size:.76rem;
+  color:var(--ink-faint);
+  margin-top:4px;
+  line-height:1.5;
 }
 
-.hero-cta{margin-top:30px;display:flex;gap:10px;flex-wrap:wrap}
-@media(max-width:760px){.hero-cta{justify-content:center}}
+.hero-cta{margin-top:32px;display:flex;gap:10px;flex-wrap:wrap}
+@media(max-width:820px){.hero-cta{justify-content:center}}
 .btn{
   display:inline-flex;align-items:center;gap:8px;
-  padding:11px 20px;
+  padding:12px 22px;
   font-size:.88rem;font-weight:600;
   border:1.5px solid var(--ink);
   border-radius:var(--radius-sm);
@@ -420,33 +404,26 @@ section{padding:88px 0;scroll-margin-top:72px}
 /* ============================================================
    SECTION HEADINGS
    ============================================================ */
-.sec-head{margin-bottom:36px}
+.sec-head{margin-bottom:44px;max-width:720px}
 .kicker{
   display:inline-flex;align-items:center;gap:8px;
   font-family:var(--font-mono);
   font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;
   color:var(--ink-faint);
-  margin-bottom:10px;
+  margin-bottom:12px;
 }
 .kicker::before{
-  content:"";width:18px;height:1.5px;background:var(--ink-faint);border-radius:2px;
+  content:"";width:20px;height:1.5px;background:var(--ink-faint);border-radius:2px;
 }
+.sec-head p{font-size:1.02rem;line-height:1.7;margin-top:14px}
 
 /* ============================================================
    OBJECTIF
    ============================================================ */
-.objective-intro{
-  max-width:720px;
-  font-size:1.05rem;
-  line-height:1.75;
-  margin-bottom:34px;
-}
-.objective-intro strong{color:var(--ink);font-weight:600}
-
 .objective{
   display:grid;
   grid-template-columns:repeat(2,1fr);
-  gap:14px;
+  gap:16px;
 }
 @media(max-width:760px){.objective{grid-template-columns:1fr}}
 
@@ -455,7 +432,7 @@ section{padding:88px 0;scroll-margin-top:72px}
   background:var(--card);
   border:1px solid var(--line);
   border-radius:var(--radius);
-  padding:26px 26px 26px;
+  padding:28px 28px 28px;
   overflow:hidden;
   transition:transform .3s var(--ease), border-color .3s var(--ease), box-shadow .3s var(--ease);
 }
@@ -472,12 +449,12 @@ section{padding:88px 0;scroll-margin-top:72px}
 
 .obj-head{
   display:flex;align-items:center;gap:12px;
-  margin-bottom:12px;
+  margin-bottom:14px;
 }
 .obj-icon{
   display:inline-grid;place-items:center;
-  width:34px;height:34px;border-radius:9px;
-  font-family:var(--font-mono);font-size:.7rem;font-weight:700;
+  width:38px;height:38px;border-radius:10px;
+  font-family:var(--font-mono);font-size:.72rem;font-weight:700;
   flex-shrink:0;
 }
 .obj-card.ds .obj-icon{background:var(--ds-soft);color:var(--ds)}
@@ -485,22 +462,22 @@ section{padding:88px 0;scroll-margin-top:72px}
 .obj-card.de .obj-icon{background:var(--de-soft);color:var(--de)}
 .obj-card.calc .obj-icon{background:var(--calc-soft);color:var(--calc)}
 
-.obj-card h3{font-size:1.02rem;margin:0}
-.obj-card p{font-size:.88rem;line-height:1.65;margin:0;color:var(--ink-soft)}
+.obj-card h3{font-size:1.05rem;margin:0}
+.obj-card p{font-size:.9rem;line-height:1.65;margin:0;color:var(--ink-soft)}
 
 .objective-note{
-  margin-top:22px;
-  padding:20px 24px;
+  margin-top:24px;
+  padding:22px 26px;
   border:1px dashed var(--line-strong);
   border-radius:var(--radius);
   background:var(--paper-2);
-  font-size:.93rem;
+  font-size:.94rem;
   color:var(--ink-soft);
-  display:flex;align-items:flex-start;gap:14px;
-  line-height:1.65;
+  display:flex;align-items:flex-start;gap:16px;
+  line-height:1.7;
 }
 .objective-note svg{
-  width:20px;height:20px;flex-shrink:0;margin-top:3px;
+  width:22px;height:22px;flex-shrink:0;margin-top:2px;
   stroke:var(--ink);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;
 }
 .objective-note strong{color:var(--ink);font-weight:600}
@@ -508,11 +485,13 @@ section{padding:88px 0;scroll-margin-top:72px}
 /* ============================================================
    ABOUT
    ============================================================ */
-#about p{max-width:680px;font-size:1.05rem;line-height:1.78;transition:opacity .2s var(--ease)}
+.about-body{max-width:680px;font-size:1.05rem;line-height:1.8;color:var(--ink-soft);transition:opacity .2s var(--ease)}
+.about-body strong{color:var(--ink);font-weight:600}
+.about-body br{content:"";display:block;margin:8px 0}
 .about-foot{
-  margin-top:24px;
-  display:flex;flex-wrap:wrap;gap:10px 26px;
-  font-size:.87rem;color:var(--ink-soft);
+  margin-top:32px;
+  display:flex;flex-wrap:wrap;gap:12px 30px;
+  font-size:.88rem;color:var(--ink-soft);
 }
 .about-foot span{display:inline-flex;align-items:center;gap:8px}
 .about-foot strong{color:var(--ink);font-weight:600}
@@ -523,7 +502,7 @@ section{padding:88px 0;scroll-margin-top:72px}
 .skills-grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
-  gap:14px;
+  gap:16px;
 }
 @media(max-width:900px){.skills-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:620px){.skills-grid{grid-template-columns:1fr}}
@@ -533,7 +512,7 @@ section{padding:88px 0;scroll-margin-top:72px}
   background:var(--card);
   border:1px solid var(--line);
   border-radius:var(--radius);
-  padding:22px 22px 24px;
+  padding:26px 24px 26px;
   overflow:hidden;
   transition:opacity .3s var(--ease), transform .3s var(--ease),
              border-color .3s var(--ease), box-shadow .3s var(--ease);
@@ -554,17 +533,17 @@ section{padding:88px 0;scroll-margin-top:72px}
 .skill-cat.is-lit::before{transform:scaleY(1)}
 .skill-cat.is-dim{opacity:.32;transform:none;box-shadow:none}
 
-.skill-cat h3{margin-bottom:8px;font-size:.98rem}
-.skill-cat p{font-size:.87rem;line-height:1.62;margin:0}
+.skill-cat h3{margin-bottom:10px;font-size:1rem}
+.skill-cat p{font-size:.88rem;line-height:1.65;margin:0}
 
 /* ============================================================
    LEGEND
    ============================================================ */
 .legend{
-  display:flex;gap:18px;flex-wrap:wrap;
+  display:flex;gap:20px;flex-wrap:wrap;
   font-size:.78rem;color:var(--ink-faint);
   font-family:var(--font-mono);
-  margin-bottom:12px;
+  margin-bottom:16px;
 }
 .legend span{display:inline-flex;align-items:center;gap:7px}
 .dot{width:7px;height:7px;border-radius:50%;display:inline-block;flex-shrink:0}
@@ -576,55 +555,55 @@ section{padding:88px 0;scroll-margin-top:72px}
 /* ============================================================
    EXPERIENCE
    ============================================================ */
-.timeline{position:relative;padding-left:26px}
+.timeline{position:relative;padding-left:28px}
 .timeline::before{
-  content:"";position:absolute;left:5px;top:10px;bottom:10px;width:1.5px;
+  content:"";position:absolute;left:5px;top:12px;bottom:12px;width:1.5px;
   background:linear-gradient(180deg,var(--line),var(--line-strong),var(--line));
   border-radius:2px;
 }
-@media(max-width:560px){.timeline{padding-left:18px}.timeline::before{left:3px}}
+@media(max-width:560px){.timeline{padding-left:20px}.timeline::before{left:3px}}
 
-.entry{position:relative;padding:0 0 42px 0}
+.entry{position:relative;padding:0 0 48px 0}
 .entry:last-child{padding-bottom:0}
 .entry::before{
-  content:"";position:absolute;left:-26px;top:8px;
-  width:11px;height:11px;border-radius:50%;
+  content:"";position:absolute;left:-28px;top:8px;
+  width:12px;height:12px;border-radius:50%;
   background:var(--paper);
   border:2px solid var(--line-strong);
   transition:border-color .3s var(--ease), background .3s var(--ease), transform .3s var(--ease);
 }
-@media(max-width:560px){.entry::before{left:-18px;width:9px;height:9px}}
+@media(max-width:560px){.entry::before{left:-20px;width:10px;height:10px}}
 .entry:hover::before{border-color:var(--ink);transform:scale(1.15)}
 
 .entry-head{
   display:flex;justify-content:space-between;
   gap:16px;flex-wrap:wrap;align-items:baseline;
-  margin-bottom:6px;
+  margin-bottom:8px;
 }
-.entry-head h3{font-size:1.02rem;line-height:1.35}
+.entry-head h3{font-size:1.05rem;line-height:1.4}
 .entry-date{
   font-family:var(--font-mono);
   font-size:.74rem;letter-spacing:.02em;
   color:var(--ink-faint);
   white-space:nowrap;
-  padding:3px 9px;
+  padding:4px 10px;
   border:1px solid var(--line);
   border-radius:999px;
   background:var(--card);
 }
 .entry-org{
-  font-size:.88rem;
+  font-size:.9rem;
   color:var(--ink-soft);
-  margin-bottom:14px;
+  margin-bottom:16px;
   font-style:italic;
 }
 .entry ul{margin-top:2px}
 .entry li{
   position:relative;
-  padding-left:18px;
-  margin-bottom:10px;
-  font-size:.93rem;
-  line-height:1.62;
+  padding-left:20px;
+  margin-bottom:12px;
+  font-size:.94rem;
+  line-height:1.65;
   color:var(--ink-soft);
   transition:opacity .3s var(--ease);
 }
@@ -649,16 +628,16 @@ section{padding:88px 0;scroll-margin-top:72px}
   font-size:.72rem;
   letter-spacing:.01em;
   color:var(--ink-faint);
-  margin-top:14px;
-  padding-top:12px;
+  margin-top:16px;
+  padding-top:14px;
   border-top:1px dashed var(--line);
 }
 
 /* ============================================================
    PROJECTS
    ============================================================ */
-.projects{display:grid;gap:16px}
-@media(min-width:820px){.projects{grid-template-columns:1fr 1fr}}
+.projects{display:grid;gap:18px}
+@media(min-width:840px){.projects{grid-template-columns:1fr 1fr}}
 .projects .proj:first-child{grid-column:1/-1}
 
 .proj{
@@ -666,7 +645,7 @@ section{padding:88px 0;scroll-margin-top:72px}
   background:var(--card);
   border:1px solid var(--line);
   border-radius:var(--radius);
-  padding:26px 26px 24px;
+  padding:30px 30px 28px;
   overflow:hidden;
   transition:opacity .3s var(--ease), transform .3s var(--ease),
              border-color .3s var(--ease), box-shadow .3s var(--ease);
@@ -678,35 +657,34 @@ section{padding:88px 0;scroll-margin-top:72px}
   font-family:var(--font-mono);
   font-size:.68rem;letter-spacing:.08em;
   color:var(--ink-faint);
-  margin-bottom:12px;
+  margin-bottom:14px;
   display:block;
 }
 .proj-head{
   display:flex;justify-content:space-between;
   gap:16px;flex-wrap:wrap;align-items:baseline;
-  margin-bottom:10px;
+  margin-bottom:12px;
 }
-.proj-head h3{font-size:1.08rem}
-.proj p{font-size:.92rem;line-height:1.65;max-width:620px;margin:0}
-.proj .tools{margin-top:16px}
+.proj-head h3{font-size:1.12rem;letter-spacing:-.015em}
+.proj p{font-size:.93rem;line-height:1.7;max-width:640px;margin:0}
+.proj .tools{margin-top:18px}
 
-.proj-links{margin-top:16px;display:flex;gap:16px;flex-wrap:wrap}
+.proj-links{margin-top:18px;display:flex;gap:18px;flex-wrap:wrap}
 .proj-links a{
-  display:inline-flex;align-items:center;gap:6px;
-  font-size:.82rem;font-weight:600;
+  display:inline-flex;align-items:center;gap:7px;
+  font-size:.83rem;font-weight:600;
   color:var(--ink);
   padding-bottom:2px;
   border-bottom:1.5px solid var(--line-strong);
   transition:border-color .2s, gap .2s;
 }
-.proj-links a:hover{border-color:var(--ink);gap:9px}
+.proj-links a:hover{border-color:var(--ink);gap:10px}
 .proj-links a svg{width:13px;height:13px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 
 /* ============================================================
    CV
    ============================================================ */
-.cv-intro{margin-bottom:26px;max-width:620px;font-size:.97rem}
-.cv-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.cv-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
 @media(max-width:1000px){.cv-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:560px){.cv-grid{grid-template-columns:1fr}}
 
@@ -715,7 +693,7 @@ section{padding:88px 0;scroll-margin-top:72px}
   background:var(--card);
   border:1px solid var(--line);
   border-radius:var(--radius);
-  padding:24px 22px 22px;
+  padding:28px 24px 24px;
   overflow:hidden;
   transition:border-color .3s var(--ease), box-shadow .3s var(--ease),
              transform .3s var(--ease), background .3s var(--ease);
@@ -738,36 +716,36 @@ section{padding:88px 0;scroll-margin-top:72px}
 
 .cv-badge{
   display:inline-grid;place-items:center;
-  width:34px;height:34px;border-radius:9px;
+  width:38px;height:38px;border-radius:10px;
   background:var(--paper-2);
   color:var(--accent,var(--ink));
-  margin-bottom:16px;
-  font-family:var(--font-mono);font-size:.7rem;font-weight:600;
+  margin-bottom:18px;
+  font-family:var(--font-mono);font-size:.72rem;font-weight:700;
   transition:background .3s;
 }
 .cv-card.is-active .cv-badge{background:var(--accent-soft, var(--paper-2))}
 
-.cv-card h3{font-size:.98rem;margin-bottom:6px}
-.cv-card p{font-size:.83rem;line-height:1.55;margin:0 0 18px}
+.cv-card h3{font-size:1rem;margin-bottom:8px}
+.cv-card p{font-size:.85rem;line-height:1.6;margin:0 0 20px}
 .cv-card a{
-  display:inline-flex;align-items:center;gap:7px;
-  font-size:.81rem;font-weight:600;
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:.82rem;font-weight:600;
   color:var(--ink);
   padding-bottom:2px;
   border-bottom:1.5px solid var(--ink);
   transition:gap .2s;
 }
-.cv-card a:hover{gap:10px}
+.cv-card a:hover{gap:11px}
 .cv-card a svg{width:13px;height:13px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 
 /* ============================================================
    EDUCATION
    ============================================================ */
-.edu-item{padding:26px 0;border-top:1px solid var(--line)}
+.edu-item{padding:32px 0;border-top:1px solid var(--line)}
 .edu-item:first-of-type{border-top:none;padding-top:0}
-.edu-item .entry-head{margin-bottom:6px}
-.edu-item .entry-org{margin-bottom:10px;font-style:normal}
-.edu-item p{font-size:.9rem;line-height:1.7;max-width:660px}
+.edu-item .entry-head{margin-bottom:8px}
+.edu-item .entry-org{margin-bottom:12px;font-style:normal}
+.edu-item p{font-size:.92rem;line-height:1.72;max-width:680px}
 
 /* ============================================================
    CONTACT
@@ -779,37 +757,37 @@ html[data-theme="dark"] #contact{background:var(--card);border-top:1px solid var
   background-image:
     linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px);
-  background-size:38px 38px;
+  background-size:42px 42px;
   -webkit-mask-image:radial-gradient(ellipse 70% 100% at 50% 100%, #000, transparent 75%);
           mask-image:radial-gradient(ellipse 70% 100% at 50% 100%, #000, transparent 75%);
 }
 html[data-theme="dark"] #contact::before{opacity:.4}
 #contact .wrap{position:relative;z-index:1}
-#contact h2{color:var(--paper);margin-bottom:12px}
+#contact h2{color:var(--paper);margin-bottom:16px}
 html[data-theme="dark"] #contact h2{color:var(--ink)}
-#contact p{color:rgba(255,255,255,.65);max-width:600px;font-size:1.02rem;line-height:1.7}
+#contact p{color:rgba(255,255,255,.7);max-width:620px;font-size:1.05rem;line-height:1.75}
 html[data-theme="dark"] #contact p{color:var(--ink-soft)}
 
-.contact-list{margin-top:30px;display:flex;flex-wrap:wrap;gap:12px}
+.contact-list{margin-top:36px;display:flex;flex-wrap:wrap;gap:14px}
 .contact-list a{
-  display:inline-flex;align-items:center;gap:9px;
-  font-size:.9rem;font-weight:500;
-  padding:11px 18px;
-  border:1px solid rgba(255,255,255,.18);
+  display:inline-flex;align-items:center;gap:10px;
+  font-size:.92rem;font-weight:500;
+  padding:13px 22px;
+  border:1px solid rgba(255,255,255,.2);
   border-radius:999px;
   color:var(--paper);
   transition:background .22s var(--ease), border-color .22s var(--ease), transform .22s var(--ease);
 }
 html[data-theme="dark"] .contact-list a{border-color:var(--line);color:var(--ink)}
-.contact-list a:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.4);transform:translateY(-2px)}
+.contact-list a:hover{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.45);transform:translateY(-2px)}
 html[data-theme="dark"] .contact-list a:hover{background:var(--paper-2);border-color:var(--line-strong)}
-.contact-list a svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+.contact-list a svg{width:17px;height:17px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
 
 /* ============================================================
    FOOTER
    ============================================================ */
 footer{
-  padding:28px 0;
+  padding:32px 0;
   text-align:center;
   font-family:var(--font-mono);
   font-size:.74rem;
@@ -829,8 +807,8 @@ footer .top-link svg{width:13px;height:13px;stroke:currentColor;fill:none;stroke
    ============================================================ */
 html.js .reveal{
   opacity:0;
-  transform:translateY(18px);
-  transition:opacity .7s var(--ease), transform .7s var(--ease);
+  transform:translateY(20px);
+  transition:opacity .8s var(--ease), transform .8s var(--ease);
   will-change:opacity, transform;
 }
 html.js .reveal.in{opacity:1;transform:none}
@@ -857,7 +835,7 @@ html.js .reveal.in{opacity:1;transform:none}
 
     <nav class="nav-links" id="navLinks" aria-label="Navigation principale">
       <a href="#objective">Objectif</a>
-      <a href="#about">À propos</a>
+      <a href="#about">Parcours</a>
       <a href="#skills">Compétences</a>
       <a href="#experience">Expérience</a>
       <a href="#projects">Projets</a>
@@ -884,7 +862,7 @@ html.js .reveal.in{opacity:1;transform:none}
     <div class="hero-grid">
 
       <div class="frame reveal">
-        <img src="photo.jpg" alt="Portrait de Moussa Diallo" width="148" height="148">
+        <img src="photo.jpg" alt="Portrait de Moussa Diallo" width="168" height="168">
         <span class="tick tl"></span><span class="tick tr"></span>
         <span class="tick bl"></span><span class="tick br"></span>
       </div>
@@ -897,19 +875,15 @@ html.js .reveal.in{opacity:1;transform:none}
 
         <h1 class="reveal">Moussa Diallo</h1>
 
-        <div class="hero-role reveal">
-          Mathématiques appliquées
-          <span class="sep">·</span>
-          Données
-          <span class="sep">·</span>
-          Calcul scientifique
-        </div>
+        <p class="hero-role reveal">
+          Je transforme des données complexes en décisions fiables.
+        </p>
 
         <p class="hero-tagline reveal">
           Master 2 Mathématiques Appliquées (MApI3, Université Toulouse III) validé,
-          diplôme officiel en décembre 2026. Je relis la donnée de bout en bout :
-          collecte Python, structuration SQL, modèles prédictifs, analyse statistique
-          et simulation numérique.
+          diplôme officiel en décembre 2026. J'interviens sur toute la chaîne :
+          collecte Python, structuration SQL, modèles prédictifs, analyse
+          statistique et simulation numérique.
         </p>
 
         <div class="hero-meta reveal">
@@ -918,21 +892,21 @@ html.js .reveal.in{opacity:1;transform:none}
           <span>CDI ou CDD</span>
         </div>
 
-        <div class="chips reveal">
-          <span class="chip"><strong>2</strong> stages en laboratoire</span>
-          <span class="chip"><strong>R² 0,76</strong> avec XGBoost</span>
-          <span class="chip"><strong>2 297</strong> formulations, <strong>483</strong> images</span>
-        </div>
-
-        <!-- LENS -->
-        <div class="lens reveal">
-          <div class="lens-label">Lire ce profil sous l'angle</div>
-          <div class="lens-tabs" role="tablist" aria-label="Choisir un angle de lecture du profil">
-            <button role="tab" aria-selected="true"  data-lens="all">Vue d'ensemble</button>
-            <button role="tab" aria-selected="false" data-lens="ds">Data Science</button>
-            <button role="tab" aria-selected="false" data-lens="analyst">Data Analyst</button>
-            <button role="tab" aria-selected="false" data-lens="de">Data Engineering</button>
-            <button role="tab" aria-selected="false" data-lens="calc">Calcul scientifique</button>
+        <div class="hero-stats reveal">
+          <div class="stat">
+            <div class="stat-value">2</div>
+            <div class="stat-label">stages en laboratoire</div>
+            <div class="stat-context">L2MGC (matériaux) et IRIT (XAI)</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value">R² 0,76</div>
+            <div class="stat-label">avec XGBoost</div>
+            <div class="stat-context">Sur un benchmark de 6 modèles</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value">2 297</div>
+            <div class="stat-label">formulations analysées</div>
+            <div class="stat-context">Et 483 images MEB/BSE structurées</div>
           </div>
         </div>
 
@@ -941,9 +915,9 @@ html.js .reveal.in{opacity:1;transform:none}
             Voir ce que je recherche
             <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
           </a>
-          <a class="btn btn-line" href="mailto:diallomoussa052001@gmail.com">
-            Me contacter
-            <svg viewBox="0 0 24 24"><path d="M4 6h16v12H4z"/><path d="m4 7 8 6 8-6"/></svg>
+          <a class="btn btn-line" href="#cv">
+            Télécharger mon CV
+            <svg viewBox="0 0 24 24"><path d="M12 4v12M6 12l6 6 6-6M5 20h14"/></svg>
           </a>
         </div>
       </div>
@@ -958,13 +932,12 @@ html.js .reveal.in{opacity:1;transform:none}
     <div class="sec-head reveal">
       <span class="kicker">Ce que je recherche</span>
       <h2>Mon objectif professionnel</h2>
+      <p>
+        Je recherche mon premier poste en CDI ou CDD, à pourvoir à partir
+        d'octobre 2026, partout en France. Mon profil peut s'inscrire dans
+        quatre directions selon les besoins de votre équipe.
+      </p>
     </div>
-
-    <p class="objective-intro reveal">
-      Je recherche mon <strong>premier poste en CDI ou CDD</strong>, à pourvoir à partir
-      d'<strong>octobre 2026</strong>, partout en France. Mon profil peut s'inscrire
-      dans quatre directions selon les besoins de votre équipe.
-    </p>
 
     <div class="objective">
 
@@ -1017,22 +990,22 @@ html.js .reveal.in{opacity:1;transform:none}
 <section id="about" class="rule">
   <div class="measure">
     <div class="sec-head reveal">
-      <span class="kicker">À propos</span>
-      <h2>Qui je suis</h2>
+      <span class="kicker">Parcours</span>
+      <h2>Mon parcours en quelques mots</h2>
     </div>
 
     <p id="about-text"
-       class="reveal"
-       data-text-all="Master 2 Mathématiques Appliquées pour l'Ingénierie, l'Industrie et l'Innovation (MApI3, Université Toulouse III Paul Sabatier) validé avec attestation de réussite. Le diplôme officiel sera délivré en décembre 2026. Je sais mener une chaîne complète entre la donnée brute et la décision : collecte Python, structuration SQL, modèles prédictifs, analyse statistique, méthodes numériques et simulation. Deux stages en laboratoire de recherche m'ont permis de mettre ces compétences en pratique de bout en bout, dans un cadre scientifique rigoureux. Je cherche aujourd'hui un poste de Data Scientist, Data Analyst, Data Engineer ou ingénieur calcul scientifique, en CDI ou CDD, partout en France."
-       data-text-ds="Je conçois des modèles prédictifs fiables en machine learning, deep learning et modélisation multimodale, à partir de données complexes et hétérogènes. Ces compétences ont été mises en pratique lors de deux stages en laboratoire de recherche, de la donnée brute au modèle validé. Master 2 Mathématiques Appliquées (MApI3, Toulouse III) validé avec attestation de réussite, diplôme officiel en décembre 2026. Je cherche aujourd'hui un poste de Data Scientist ou Machine Learning Engineer, en CDI ou CDD, partout en France."
-       data-text-analyst="J'explore et j'analyse des données scientifiques hétérogènes pour en extraire des tendances et des modèles interprétables. Cela passe par des statistiques descriptives et inférentielles, de la visualisation, des tableaux de bord et de la restitution aux équipes. Ces compétences ont été mises en pratique lors de deux stages en laboratoire de recherche, avec un fort volume de données traité : 2 297 formulations et 483 images. Master 2 Mathématiques Appliquées (MApI3, Toulouse III) validé avec attestation de réussite, diplôme officiel en décembre 2026. Je cherche aujourd'hui un poste de Data Analyst ou Business Analyst, en CDI ou CDD, partout en France."
-       data-text-de="Je collecte et structure des données hétérogènes de bout en bout : extraction automatisée avec Python (API REST, web scraping), nettoyage, fiabilisation, puis stockage et requêtage SQL pour rendre les données exploitables. Ces compétences ont été mises en pratique lors de deux stages en laboratoire de recherche, avec un volume important : 388 articles collectés, 2 297 formulations et 483 images structurées. Master 2 Mathématiques Appliquées (MApI3, Toulouse III) validé avec attestation de réussite, diplôme officiel en décembre 2026. Je cherche aujourd'hui un poste de Data Engineer ou Analytics Engineer, en CDI ou CDD, partout en France."
-       data-text-calc="Formé aux méthodes numériques, à l'optimisation, aux simulations de Monte-Carlo et à la quantification d'incertitude, j'applique ces outils à la modélisation physique et au traitement du signal, notamment lors de deux stages en laboratoire de recherche. Master 2 Mathématiques Appliquées (MApI3, Toulouse III) validé avec attestation de réussite, diplôme officiel en décembre 2026. Je cherche aujourd'hui un poste d'ingénieur calcul scientifique, R&D, modélisation ou simulation numérique, en CDI ou CDD, partout en France.">
-      Master 2 Mathématiques Appliquées pour l'Ingénierie, l'Industrie et l'Innovation (MApI3, Université Toulouse III Paul Sabatier) validé avec attestation de réussite. Le diplôme officiel sera délivré en décembre 2026. Je sais mener une chaîne complète entre la donnée brute et la décision : collecte Python, structuration SQL, modèles prédictifs, analyse statistique, méthodes numériques et simulation. Deux stages en laboratoire de recherche m'ont permis de mettre ces compétences en pratique de bout en bout, dans un cadre scientifique rigoureux. Je cherche aujourd'hui un poste de Data Scientist, Data Analyst, Data Engineer ou ingénieur calcul scientifique, en CDI ou CDD, partout en France.
+       class="about-body reveal"
+       data-text-all="Je m'appelle Moussa Diallo. J'ai validé un Master 2 Mathématiques Appliquées (MApI3, Université Toulouse III Paul Sabatier), avec attestation de réussite. Le diplôme officiel me sera délivré en décembre 2026.<br><br>Mon parcours m'a formé à deux univers complémentaires. D'un côté, les mathématiques appliquées : optimisation, méthodes numériques, EDP, probabilités, statistiques, Monte-Carlo. De l'autre, la science des données : machine learning, deep learning, analyse statistique, visualisation.<br><br>Deux stages en laboratoire de recherche m'ont permis de mettre tout cela en pratique, de la collecte de données jusqu'à la modélisation. Aujourd'hui, je cherche mon premier poste en CDI ou CDD, partout en France."
+       data-text-ds="Je conçois des modèles prédictifs fiables en machine learning, deep learning et modélisation multimodale, à partir de données complexes et hétérogènes.<br><br>Pendant mon stage au L2MGC, j'ai construit un modèle multimodal qui combine données tabulaires et images microscopiques, avec un benchmark de 6 modèles et un meilleur résultat à R² = 0,76 avec XGBoost.<br><br>Pendant mon stage à l'IRIT, j'ai développé des outils d'explicabilité pour CNN et ResNet. Aujourd'hui, je cherche un poste de Data Scientist ou Machine Learning Engineer, en CDI ou CDD, partout en France."
+       data-text-analyst="J'explore et j'analyse des données scientifiques hétérogènes pour en extraire des tendances et des modèles interprétables.<br><br>Pendant mon stage au L2MGC, j'ai analysé 2 297 formulations et 483 images, en extrayant les corrélations pertinentes et en restituant les résultats sous forme de tableaux de synthèse et de graphiques.<br><br>Pendant mon stage à l'IRIT, j'ai créé des tableaux de bord interactifs pour permettre aux chercheurs d'explorer visuellement le comportement des modèles. Aujourd'hui, je cherche un poste de Data Analyst ou Business Analyst, en CDI ou CDD, partout en France."
+       data-text-de="Je collecte et structure des données hétérogènes de bout en bout.<br><br>Pendant mon stage au L2MGC, j'ai extrait automatiquement 388 articles scientifiques avec Python (API CrossRef, web scraping), traité les données JSON, structuré une base de 2 297 formulations et 483 images, puis organisé leur stockage et leur requêtage en SQL.<br><br>J'ai également automatisé l'association de 141 images à leur formulation par caption-matching. Aujourd'hui, je cherche un poste de Data Engineer ou Analytics Engineer, en CDI ou CDD, partout en France."
+       data-text-calc="Formé aux méthodes numériques, à l'optimisation, aux simulations de Monte-Carlo et à la quantification d'incertitude, j'applique ces outils à la modélisation physique et au traitement du signal.<br><br>Pendant mon stage au L2MGC, j'ai travaillé sur la modélisation multimodale de matériaux cimentaires. Pendant mon stage à l'IRIT, j'ai développé des outils d'analyse numérique pour les réseaux de neurones.<br><br>En projet académique, j'ai reconstruit des images à partir d'un capteur de Bayer par optimisation variationnelle (variation totale), avec étude de convergence et évaluation PSNR/SSIM. Aujourd'hui, je cherche un poste d'ingénieur calcul scientifique, R&D, modélisation ou simulation numérique, en CDI ou CDD, partout en France.">
+      Je m'appelle Moussa Diallo. J'ai validé un Master 2 Mathématiques Appliquées (MApI3, Université Toulouse III Paul Sabatier), avec attestation de réussite. Le diplôme officiel me sera délivré en décembre 2026.<br><br>Mon parcours m'a formé à deux univers complémentaires. D'un côté, les mathématiques appliquées : optimisation, méthodes numériques, EDP, probabilités, statistiques, Monte-Carlo. De l'autre, la science des données : machine learning, deep learning, analyse statistique, visualisation.<br><br>Deux stages en laboratoire de recherche m'ont permis de mettre tout cela en pratique, de la collecte de données jusqu'à la modélisation. Aujourd'hui, je cherche mon premier poste en CDI ou CDD, partout en France.
     </p>
 
     <div class="about-foot reveal">
-      <span><strong>Langues :</strong> français courant, anglais B2 (documentation technique, rédaction scientifique)</span>
+      <span><strong>Langues :</strong> français courant, anglais B2</span>
       <span><strong>Base :</strong> Toulouse / Île-de-France, mobile en France</span>
     </div>
   </div>
@@ -1043,7 +1016,8 @@ html.js .reveal.in{opacity:1;transform:none}
   <div class="wrap">
     <div class="sec-head reveal">
       <span class="kicker">Compétences</span>
-      <h2>Ce que je sais faire</h2>
+      <h2>Mes compétences en un coup d'œil</h2>
+      <p>Six domaines complémentaires, du traitement de la donnée brute jusqu'à la modélisation et la simulation.</p>
     </div>
 
     <div class="skills-grid">
@@ -1055,12 +1029,12 @@ html.js .reveal.in{opacity:1;transform:none}
 
       <div class="skill-cat reveal" data-lens="de analyst">
         <h3>Collecte et structuration de données</h3>
-        <p>Collecte automatisée avec Python : API REST (CrossRef), web scraping (BeautifulSoup, Selenium, requests). Traitement de JSON, nettoyage, fiabilisation, puis stockage et requêtage SQL pour rendre les données exploitables.</p>
+        <p>Collecte automatisée avec Python : API REST (CrossRef), web scraping (BeautifulSoup, Selenium, requests). Traitement de JSON, nettoyage, fiabilisation, puis stockage et requêtage SQL.</p>
       </div>
 
       <div class="skill-cat reveal" data-lens="ds calc">
         <h3>Machine learning et modélisation</h3>
-        <p>PyTorch, TensorFlow et Keras, scikit-learn, XGBoost, OpenCV. CNN, ResNet, RNN, LSTM, GRU, SVM, forêts aléatoires, clustering k-means, régression régularisée (Ridge, Lasso), validation croisée, XAI (Grad-CAM, t-SNE).</p>
+        <p>PyTorch, TensorFlow et Keras, scikit-learn, XGBoost, OpenCV. CNN, ResNet, RNN, LSTM, GRU, SVM, forêts aléatoires, clustering k-means, régression régularisée, validation croisée, XAI (Grad-CAM, t-SNE).</p>
       </div>
 
       <div class="skill-cat reveal" data-lens="calc analyst">
@@ -1087,7 +1061,7 @@ html.js .reveal.in{opacity:1;transform:none}
   <div class="measure">
     <div class="sec-head reveal">
       <span class="kicker">Expérience</span>
-      <h2>Expérience professionnelle</h2>
+      <h2>Ce que j'ai fait concrètement</h2>
     </div>
 
     <div class="legend reveal">
@@ -1106,12 +1080,12 @@ html.js .reveal.in{opacity:1;transform:none}
         </div>
         <div class="entry-org">Laboratoire L2MGC, CY Cergy Paris Université · Neuville-sur-Oise</div>
         <ul>
-          <li data-lens="de analyst">Collecte automatisée de <strong>388 articles scientifiques</strong> avec Python (API CrossRef, web scraping), parsing JSON et structuration d'une base exploitable.<span class="tags"><span class="tag de"></span><span class="tag analyst"></span></span></li>
-          <li data-lens="de analyst">Nettoyage, fiabilisation et analyse exploratoire de <strong>2 297 formulations</strong> (43 variables) et <strong>483 images</strong> MEB/BSE, avec stockage et requêtage SQL.<span class="tags"><span class="tag de"></span><span class="tag analyst"></span></span></li>
-          <li data-lens="de ds">Feature engineering : segmentation multi-Otsu, matrices GLCM et caption-matching pour associer automatiquement <strong>141 images</strong> à leur formulation (+86 % de données exploitables).<span class="tags"><span class="tag de"></span><span class="tag ds"></span></span></li>
-          <li data-lens="ds calc">Développement d'une approche <strong>multimodale</strong> combinant données tabulaires et images microscopiques pour prédire la résistance mécanique du béton.<span class="tags"><span class="tag ds"></span><span class="tag calc"></span></span></li>
-          <li data-lens="ds analyst">Benchmark de 6 modèles de machine learning avec validation croisée. <strong>XGBoost ressort meilleur modèle, R² = 0,76, MAE &lt; 10 MPa</strong>.<span class="tags"><span class="tag ds"></span><span class="tag analyst"></span></span></li>
-          <li data-lens="ds analyst">Interprétabilité (XAI) : analyse t-SNE et Grad-CAM, restitution des résultats auprès des chercheurs.<span class="tags"><span class="tag ds"></span><span class="tag analyst"></span></span></li>
+          <li data-lens="de analyst">J'ai commencé par <strong>collecter automatiquement 388 articles scientifiques</strong> avec Python (API CrossRef, web scraping), puis à structurer cette matière première en base exploitable.<span class="tags"><span class="tag de"></span><span class="tag analyst"></span></span></li>
+          <li data-lens="de analyst">Ensuite, j'ai <strong>nettoyé, fiabilisé et analysé 2 297 formulations</strong> (43 variables) et <strong>483 images</strong> MEB/BSE, avec stockage et requêtage SQL.<span class="tags"><span class="tag de"></span><span class="tag analyst"></span></span></li>
+          <li data-lens="de ds">J'ai fait du feature engineering : segmentation multi-Otsu, matrices GLCM, et un caption-matching qui a <strong>associé automatiquement 141 images à leur formulation</strong> (+86 % de données exploitables).<span class="tags"><span class="tag de"></span><span class="tag ds"></span></span></li>
+          <li data-lens="ds calc">J'ai développé une approche <strong>multimodale</strong> qui combine données tabulaires et images microscopiques pour prédire la résistance mécanique du béton.<span class="tags"><span class="tag ds"></span><span class="tag calc"></span></span></li>
+          <li data-lens="ds analyst">J'ai benchmarké 6 modèles de machine learning en validation croisée. <strong>XGBoost est ressorti meilleur, avec un R² = 0,76 et un MAE &lt; 10 MPa</strong>.<span class="tags"><span class="tag ds"></span><span class="tag analyst"></span></span></li>
+          <li data-lens="ds analyst">J'ai enfin travaillé l'interprétabilité (t-SNE, Grad-CAM) et restitué les résultats aux chercheurs.<span class="tags"><span class="tag ds"></span><span class="tag analyst"></span></span></li>
         </ul>
         <div class="tools">Python · pandas · NumPy · scikit-learn · PyTorch · XGBoost · OpenCV · API CrossRef · JSON · web scraping · SQL · Git</div>
       </article>
@@ -1123,9 +1097,9 @@ html.js .reveal.in{opacity:1;transform:none}
         </div>
         <div class="entry-org">Laboratoire IRIT, Université Toulouse III · Toulouse</div>
         <ul>
-          <li data-lens="ds calc">Développement d'outils d'explicabilité pour réseaux de neurones convolutifs <strong>CNN et ResNet</strong> : cartes d'activation Grad-CAM et analyse de l'importance des filtres.<span class="tags"><span class="tag ds"></span><span class="tag calc"></span></span></li>
-          <li data-lens="de ds analyst">Extraction et traitement des sorties de modèles (activations, cartes d'attention) et création de <strong>tableaux de bord interactifs</strong> pour l'analyse par les chercheurs.<span class="tags"><span class="tag de"></span><span class="tag ds"></span><span class="tag analyst"></span></span></li>
-          <li data-lens="ds de">Implémentation Python (PyTorch, NumPy) documentée et versionnée pour assurer la reproductibilité.<span class="tags"><span class="tag ds"></span><span class="tag de"></span></span></li>
+          <li data-lens="ds calc">J'ai développé des outils d'explicabilité pour réseaux de neurones convolutifs <strong>CNN et ResNet</strong> : cartes d'activation Grad-CAM et analyse de l'importance des filtres.<span class="tags"><span class="tag ds"></span><span class="tag calc"></span></span></li>
+          <li data-lens="de ds analyst">J'ai extrait et traité les sorties de modèles (activations, cartes d'attention) et créé des <strong>tableaux de bord interactifs</strong> pour l'analyse par les chercheurs.<span class="tags"><span class="tag de"></span><span class="tag ds"></span><span class="tag analyst"></span></span></li>
+          <li data-lens="ds de">J'ai documenté et versionné mon implémentation Python (PyTorch, NumPy) pour assurer la reproductibilité.<span class="tags"><span class="tag ds"></span><span class="tag de"></span></span></li>
         </ul>
         <div class="tools">Python · PyTorch · NumPy · Matplotlib · Jupyter · Git</div>
       </article>
@@ -1139,7 +1113,8 @@ html.js .reveal.in{opacity:1;transform:none}
   <div class="wrap">
     <div class="sec-head reveal">
       <span class="kicker">Projets</span>
-      <h2>Projets personnels et académiques</h2>
+      <h2>Ce que je construis</h2>
+      <p>Un projet personnel déployé en ligne, et deux projets académiques sur des problématiques de modélisation.</p>
     </div>
 
     <div class="projects">
@@ -1150,7 +1125,7 @@ html.js .reveal.in{opacity:1;transform:none}
           <h3>Assistant IA de candidature automatisé</h3>
           <span class="entry-date">2026</span>
         </div>
-        <p>Application déployée en ligne qui analyse une offre d'emploi et un CV, calcule un score de correspondance et rédige une lettre de motivation. Conception du flux de données, intégration d'un modèle de langage et déploiement web.</p>
+        <p>J'ai construit et déployé en ligne une application qui analyse une offre d'emploi et un CV, calcule un score de correspondance et rédige une lettre de motivation. Conception du flux de données, intégration d'un modèle de langage (LLM) et déploiement web.</p>
         <div class="tools">Python · Streamlit · LLM (Gemini) · Pydantic · BeautifulSoup</div>
         <div class="proj-links">
           <a href="https://agent-candidature-yyuorcs4n8cfe7cwynrmmp.streamlit.app/" target="_blank" rel="noopener">
@@ -1170,7 +1145,7 @@ html.js .reveal.in{opacity:1;transform:none}
           <h3>Demosaïcage d'images couleur &amp; analyse statistique sous incertitude</h3>
           <span class="entry-date">2025</span>
         </div>
-        <p>Inversion du filtre de Bayer (problème inverse) par optimisation variationnelle à variation totale (TV) : implémentation de l'opérateur et de son adjoint, étude de convergence. Évaluation par PSNR/SSIM et étude de robustesse par Monte-Carlo et bootstrap.</p>
+        <p>J'ai inversé le filtre de Bayer (problème inverse) par optimisation variationnelle à variation totale (TV). J'ai implémenté l'opérateur et son adjoint, étudié la convergence, évalué par PSNR/SSIM et testé la robustesse par Monte-Carlo et bootstrap.</p>
         <div class="tools">Python · NumPy · SciPy · Matplotlib</div>
       </article>
 
@@ -1180,7 +1155,7 @@ html.js .reveal.in{opacity:1;transform:none}
           <h3>Prévision de séries temporelles par deep learning</h3>
           <span class="entry-date">2025</span>
         </div>
-        <p>Implémentation et benchmark d'architectures récurrentes (RNN, LSTM, GRU) sous PyTorch pour la prédiction de séries temporelles, dont des séries financières, et la génération de séquences.</p>
+        <p>J'ai implémenté et comparé trois architectures récurrentes (RNN, LSTM, GRU) sous PyTorch pour la prédiction de séries temporelles, dont des séries financières, et la génération de séquences.</p>
         <div class="tools">Python · PyTorch · pandas · NumPy</div>
       </article>
 
@@ -1193,13 +1168,9 @@ html.js .reveal.in{opacity:1;transform:none}
   <div class="wrap">
     <div class="sec-head reveal">
       <span class="kicker">CV</span>
-      <h2>Mes CV</h2>
+      <h2>Télécharger mon CV</h2>
+      <p>Chaque version présente les mêmes expériences, mais insiste sur les compétences attendues pour le poste visé.</p>
     </div>
-
-    <p class="cv-intro reveal">
-      Chaque CV présente les mêmes expériences, mais insiste sur les compétences
-      attendues pour le poste visé. Choisissez la version qui correspond à votre offre.
-    </p>
 
     <div class="cv-grid">
 
@@ -1279,7 +1250,7 @@ html.js .reveal.in{opacity:1;transform:none}
         <span class="entry-date">sept. 2021 à mai 2023</span>
       </div>
       <div class="entry-org">Université Toulouse III Paul Sabatier</div>
-      <p>L3 MApI3 : mathématiques appliquées à l'ingénierie, l'industrie et l'innovation. L1–L2 CUPGE : cycle universitaire préparatoire aux grandes écoles — sciences pour l'ingénieur (maths, physique, informatique, chimie).</p>
+      <p>L3 MApI3 : mathématiques appliquées à l'ingénierie, l'industrie et l'innovation. L1–L2 CUPGE : cycle universitaire préparatoire aux grandes écoles — sciences pour l'ingénieur.</p>
     </div>
   </div>
 </section>
@@ -1289,7 +1260,7 @@ html.js .reveal.in{opacity:1;transform:none}
   <div class="wrap">
     <div class="sec-head reveal">
       <span class="kicker" style="color:rgba(255,255,255,.55)">Contact</span>
-      <h2>Me contacter</h2>
+      <h2>Travaillons ensemble</h2>
     </div>
 
     <p class="reveal">
@@ -1393,44 +1364,6 @@ html.js .reveal.in{opacity:1;transform:none}
   window.addEventListener('scroll', onScroll, {passive:true});
   onScroll();
 
-  /* LENS */
-  var tabs = document.querySelectorAll('.lens-tabs [role="tab"]');
-  var aboutText = document.getElementById('about-text');
-  var lensTargets = document.querySelectorAll('[data-lens]:not(.lens-tabs [data-lens])');
-
-  function setLens(lens){
-    tabs.forEach(function(t){
-      t.setAttribute('aria-selected', t.dataset.lens === lens ? 'true' : 'false');
-    });
-
-    if (aboutText){
-      var key = 'text' + lens.charAt(0).toUpperCase() + lens.slice(1);
-      aboutText.textContent = aboutText.dataset[key] || aboutText.dataset.textAll;
-    }
-
-    lensTargets.forEach(function(el){
-      if (lens === 'all'){
-        el.classList.remove('is-dim','is-lit','is-active');
-        return;
-      }
-      var lenses = (el.getAttribute('data-lens') || '').split(/\s+/);
-      var matches = lenses.indexOf(lens) !== -1;
-
-      if (el.classList.contains('skill-cat')){
-        el.classList.toggle('is-dim', !matches);
-        el.classList.toggle('is-lit', matches);
-      } else if (el.classList.contains('cv-card')){
-        el.classList.toggle('is-active', matches);
-      } else {
-        el.classList.toggle('is-dim', !matches);
-      }
-    });
-  }
-
-  tabs.forEach(function(t){
-    t.addEventListener('click', function(){ setLens(t.dataset.lens); });
-  });
-
   /* REVEAL */
   var reveals = document.querySelectorAll('.reveal');
   if ('IntersectionObserver' in window){
@@ -1444,7 +1377,7 @@ html.js .reveal.in{opacity:1;transform:none}
     }, { threshold: 0.08, rootMargin: '0px 0px -60px 0px' });
 
     reveals.forEach(function(el, i){
-      el.style.transitionDelay = Math.min(i % 6, 5) * 45 + 'ms';
+      el.style.transitionDelay = Math.min(i % 6, 5) * 50 + 'ms';
       io.observe(el);
     });
   } else {
