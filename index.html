@@ -135,11 +135,6 @@ footer .w{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 @keyframes pl{50%{transform:translateY(-5px)}}
 @media(min-width:1180px){.hire{display:block}.hp{display:none}}
 @media(prefers-reduced-motion:reduce){.tr,.hire,.hp{animation:none}}
-.tw{text-align:center;font:700 clamp(1.3rem,3.6vw,2.1rem) var(--disp);letter-spacing:-.02em;min-height:1.5em;margin-bottom:34px;position:relative}
-.tw #tw{background:linear-gradient(120deg,var(--ds),var(--de),var(--cs));-webkit-background-clip:text;background-clip:text;color:transparent}
-.tw .cur{display:inline-block;width:3px;height:1em;margin-left:5px;vertical-align:-.12em;background:var(--cs);animation:bl 1s steps(1) infinite}
-@keyframes bl{50%{opacity:0}}
-@media(prefers-reduced-motion:reduce){.tw .cur{animation:none}}
 /* TYPEWRITER : début */
 .tw{max-width:780px;margin:0 auto 52px;text-align:center;min-height:9.5rem;position:relative}
 .tw-h{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap}
@@ -167,7 +162,6 @@ footer .w{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 </div></nav>
 
 <header class="hero"><div class="w">
-  <p class="tw" aria-live="off"><span id="tw">Engagez-moi</span><span class="cur" aria-hidden="true"></span></p>
   <!-- TYPEWRITER : début (texte « machine à écrire » du hero) -->
   <div class="tw" aria-live="off">
     <div class="tw-h"><span class="tw-b" id="twb"></span><span class="tw-t" id="twt">Engagez-moi</span></div>
@@ -363,24 +357,6 @@ footer .w{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
   var s=null;try{s=localStorage.getItem('lang')}catch(e){}
   set(s||((navigator.language||'fr').slice(0,2)==='fr'?'fr':'en'));
   lg.onclick=function(){set(document.documentElement.lang==='en'?'fr':'en')};
-})();
-</script>
-<script>
-(function(){
-  var el=document.getElementById('tw');if(!el)return;
-  var W={fr:['Engagez-moi','Data Scientist','Machine Learning','IA & Data','Mathématiques appliquées'],
-         en:['Hire me','Data Scientist','Machine Learning','AI & Data','Applied Mathematics']};
-  var i=0,n=0,del=false,l;
-  if(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches){el.textContent=W[document.documentElement.lang==='en'?'en':'fr'][0];return}
-  function tick(){
-    l=W[document.documentElement.lang==='en'?'en':'fr'];
-    var w=l[i%l.length],t=70;
-    if(!del){n++;if(n>=w.length){n=w.length;del=true;t=1800}}
-    else{n--;t=35;if(n<=0){n=0;del=false;i++;t=350}}
-    el.textContent=w.slice(0,n);
-    setTimeout(tick,t);
-  }
-  el.textContent='';tick();
 })();
 </script>
 <script>
