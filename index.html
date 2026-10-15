@@ -1,1 +1,507 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<script>
+(function(){var l='fr';try{l=localStorage.getItem('lang')||((navigator.language||'fr').toLowerCase().indexOf('fr')===0?'fr':'en')}catch(e){}
+document.documentElement.lang=l;document.documentElement.classList.add('js')})();
+</script>
+<title>Moussa Diallo — Data Science, Machine Learning &amp; IA</title>
+<meta name="description" content="Portfolio de Moussa Diallo : projets de Data Science, Machine Learning, Deep Learning, vision par ordinateur, IA explicable et calcul scientifique.">
+<meta name="author" content="Moussa Diallo">
+<meta name="theme-color" content="#0a1224">
+<link rel="canonical" href="https://dialloalassane052001-ui.github.io/portfolio/">
+<meta property="og:type" content="profile">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:site_name" content="Moussa Diallo">
+<meta property="og:title" content="Moussa Diallo — Data Science, Machine Learning &amp; IA">
+<meta property="og:description" content="Projets de Data Science, Machine Learning, vision par ordinateur, IA explicable et calcul scientifique.">
+<meta property="og:url" content="https://dialloalassane052001-ui.github.io/portfolio/">
+<meta property="og:image" content="https://dialloalassane052001-ui.github.io/portfolio/photo.jpg">
+<meta property="og:image:width" content="600">
+<meta property="og:image:height" content="600">
+<meta property="og:image:alt" content="Portrait de Moussa Diallo">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Moussa Diallo — Data Science, Machine Learning &amp; IA">
+<meta name="twitter:description" content="Projets de Data Science, Machine Learning, vision par ordinateur, IA explicable et calcul scientifique.">
+<meta name="twitter:image" content="https://dialloalassane052001-ui.github.io/portfolio/photo.jpg">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Moussa Diallo","jobTitle":"Data Scientist","url":"https://dialloalassane052001-ui.github.io/portfolio/","image":"https://dialloalassane052001-ui.github.io/portfolio/photo.jpg","address":{"@type":"PostalAddress","addressLocality":"Toulouse","addressCountry":"FR"},"knowsAbout":["Data Science","Machine Learning","Deep Learning","Computer Vision","Explainable AI","Scientific Computing"],"sameAs":["https://www.linkedin.com/in/moussa-diallo-b203473a2/","https://github.com/dialloalassane052001-ui"]}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0a1224;--bg2:#0d1830;--card:#111e3a;--card2:#152447;
+  --ink:#eef2fb;--soft:#aeb9d3;--faint:#7c8aab;--line:rgba(160,180,230,.16);
+  --gold:#f2b45a;--gold2:#ffd596;--cyan:#5cc8d7;--violet:#8b8cf0;
+  --sans:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  --disp:'Space Grotesk','Inter',system-ui,sans-serif;
+  --r:18px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+html[lang=fr] .en,html[lang=en] .fr{display:none!important}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}ul{list-style:none}
+h1,h2,h3{font-family:var(--disp);letter-spacing:-.02em;line-height:1.12}
+p{color:var(--soft)}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:6px}
+.w{max-width:1120px;margin:0 auto;padding:0 24px}
+section{padding:96px 0;scroll-margin-top:56px;position:relative}
+.alt{background:linear-gradient(180deg,var(--bg2),var(--bg))}
+.k{display:inline-flex;align-items:center;gap:10px;font:600 .74rem var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+.k:before{content:"";width:28px;height:1px;background:var(--gold)}
+h2{font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:14px}
+.lead{max-width:640px;margin-bottom:44px;font-size:1.05rem}
+#bar{position:fixed;top:0;left:0;height:3px;width:100%;transform-origin:0 50%;transform:scaleX(0);background:linear-gradient(90deg,var(--gold),var(--cyan));z-index:50}
 
+/* NAV */
+nav{position:sticky;top:0;z-index:40;background:rgba(10,18,36,.72);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+nav .w{display:flex;align-items:center;justify-content:space-between;height:64px;gap:14px}
+.logo{display:flex;align-items:center;gap:11px;font:700 1rem var(--disp)}
+.logo i{font-style:normal;display:grid;place-items:center;width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,var(--gold),#e48f3a);color:#1a1205;font-size:.78rem}
+.links{display:flex;gap:2px}
+.links a{font-size:.88rem;color:var(--soft);padding:8px 13px;border-radius:9px;transition:.2s}
+.links a:hover,.links a.on{background:rgba(255,255,255,.06);color:var(--ink)}
+.links a.on{color:var(--gold2)}
+.tools{display:flex;align-items:center;gap:10px}
+.lang{display:inline-flex;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.lang button{background:transparent;border:0;color:var(--soft);font:600 .76rem var(--sans);padding:7px 11px;cursor:pointer;letter-spacing:.06em;transition:.2s}
+.lang button[aria-pressed=true]{background:var(--gold);color:#1a1205}
+#burger{display:none;background:transparent;border:1px solid var(--line);color:var(--ink);width:38px;height:36px;border-radius:10px;cursor:pointer;font-size:1.1rem}
+@media(max-width:860px){
+  .links{position:absolute;top:64px;left:0;right:0;flex-direction:column;background:rgba(10,18,36,.97);border-bottom:1px solid var(--line);padding:10px 16px 16px;display:none}
+  .links.open{display:flex}.links a{padding:12px}
+  #burger{display:block}
+}
+
+/* HERO */
+.hero{padding:70px 0 90px;overflow:hidden;min-height:calc(100vh - 64px);display:flex;align-items:center}
+#net{position:absolute;inset:0;width:100%;height:100%;z-index:0}
+.hero:before{content:"";position:absolute;inset:0;z-index:0;background:radial-gradient(60% 55% at 78% 40%,rgba(242,180,90,.13),transparent 70%),radial-gradient(50% 50% at 10% 90%,rgba(92,200,215,.10),transparent 70%);pointer-events:none}
+.hg{position:relative;z-index:1;display:grid;grid-template-columns:1.25fr .85fr;gap:56px;align-items:center;width:100%}
+.chip{display:inline-flex;align-items:center;gap:9px;border:1px solid var(--line);background:rgba(255,255,255,.04);border-radius:99px;padding:7px 15px 7px 12px;font-size:.82rem;color:var(--soft);margin-bottom:24px}
+.dot{width:8px;height:8px;border-radius:50%;background:#4ade80;box-shadow:0 0 0 0 rgba(74,222,128,.6);animation:pulse 2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 9px rgba(74,222,128,0)}100%{box-shadow:0 0 0 0 rgba(74,222,128,0)}}
+.eyebrow{font:500 .95rem var(--sans);color:var(--faint);margin-bottom:10px}
+h1{font-size:clamp(2.6rem,7vw,4.8rem);margin-bottom:16px}
+h1 span{background:linear-gradient(95deg,var(--gold),var(--gold2) 55%,var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent}
+.role{font:500 clamp(1.15rem,2.6vw,1.55rem) var(--disp);color:var(--ink);min-height:2.1em;margin-bottom:12px}
+.role b{color:var(--gold);font-weight:500}
+.caret{display:inline-block;width:2px;height:1.1em;background:var(--gold);vertical-align:-.15em;margin-left:3px;animation:blink 1s steps(2) infinite}
+@keyframes blink{50%{opacity:0}}
+.sub{max-width:560px;font-size:1.04rem;margin-bottom:30px}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:9px;font:600 .94rem var(--sans);padding:13px 24px;border-radius:12px;border:1px solid var(--line);transition:.25s;cursor:pointer}
+.btn.p{background:linear-gradient(135deg,var(--gold),#e48f3a);color:#1a1205;border-color:transparent;box-shadow:0 8px 24px -8px rgba(242,180,90,.55)}
+.btn.p:hover{transform:translateY(-2px);box-shadow:0 12px 28px -8px rgba(242,180,90,.7)}
+.btn.g{background:rgba(255,255,255,.04);color:var(--ink)}
+.btn.g:hover{background:rgba(255,255,255,.09);transform:translateY(-2px)}
+.soc{display:flex;gap:18px;margin-top:26px;font-size:.88rem}
+.soc a{color:var(--faint);border-bottom:1px solid transparent;transition:.2s}
+.soc a:hover{color:var(--gold2);border-color:var(--gold)}
+
+.ph{position:relative;justify-self:center;width:min(380px,78vw);aspect-ratio:1}
+.ph .ring{position:absolute;inset:-10px;border-radius:50%;background:conic-gradient(from 0deg,var(--gold),transparent 30%,var(--cyan) 55%,transparent 80%,var(--gold));animation:spin 14s linear infinite;-webkit-mask:radial-gradient(farthest-side,transparent calc(100% - 3px),#000 calc(100% - 2px));mask:radial-gradient(farthest-side,transparent calc(100% - 3px),#000 calc(100% - 2px))}
+@keyframes spin{to{transform:rotate(360deg)}}
+.ph .halo{position:absolute;inset:-34px;border-radius:50%;background:radial-gradient(circle,rgba(242,180,90,.20),transparent 68%);filter:blur(10px)}
+.ph img{position:relative;width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:50% 25%;border:6px solid var(--bg);box-shadow:0 30px 60px -20px rgba(0,0,0,.7)}
+.fl{position:absolute;display:flex;align-items:center;gap:8px;background:rgba(17,30,58,.88);backdrop-filter:blur(8px);border:1px solid var(--line);border-radius:12px;padding:8px 13px;font:600 .78rem var(--sans);color:var(--ink);box-shadow:0 14px 30px -12px rgba(0,0,0,.6);animation:fy 6s ease-in-out infinite}
+.fl small{display:block;font-weight:500;color:var(--faint);font-size:.68rem;line-height:1.2}
+.fl em{font-style:normal;color:var(--gold);font-family:var(--disp);font-size:1.05rem}
+.f1{top:6%;left:-14%}.f2{bottom:14%;right:-12%;animation-delay:-2s}.f3{bottom:-2%;left:6%;animation-delay:-4s}
+@keyframes fy{50%{transform:translateY(-9px)}}
+@media(max-width:900px){
+  .hero{min-height:0;padding:48px 0 70px}
+  .hg{grid-template-columns:1fr;gap:46px;text-align:center}
+  .ph{order:-1;width:min(260px,64vw)}
+  .sub{margin-inline:auto}.cta,.soc{justify-content:center}
+  .f1{left:-18%}.f2{right:-18%}
+}
+
+/* STATS */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;margin-top:-1px}
+.st{background:var(--card);padding:28px 22px;text-align:center}
+.st b{display:block;font:700 clamp(1.8rem,4vw,2.6rem) var(--disp);color:var(--gold);letter-spacing:-.03em}
+.st span{font-size:.84rem;color:var(--soft)}
+@media(max-width:760px){.stats{grid-template-columns:1fr 1fr}}
+.strip{padding:0;margin-top:-46px;position:relative;z-index:2}
+
+/* ABOUT */
+.ab{display:grid;grid-template-columns:1fr 1.1fr;gap:56px;align-items:start}
+.ab p+p{margin-top:14px}
+.ab strong{color:var(--ink);font-weight:600}
+.axes{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.ax{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;transition:.3s}
+.ax:hover{transform:translateY(-4px);border-color:rgba(242,180,90,.45)}
+.ax i{font-style:normal;display:grid;place-items:center;width:36px;height:36px;border-radius:10px;background:rgba(242,180,90,.12);color:var(--gold);font:700 .8rem var(--disp);margin-bottom:10px}
+.ax h3{font-size:1rem;margin-bottom:4px}
+.ax p{font-size:.86rem;line-height:1.5}
+@media(max-width:860px){.ab{grid-template-columns:1fr;gap:36px}}
+@media(max-width:480px){.axes{grid-template-columns:1fr}}
+
+/* PROJECTS */
+.filters{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:30px}
+.filters button{background:rgba(255,255,255,.03);border:1px solid var(--line);color:var(--soft);font:500 .85rem var(--sans);padding:8px 16px;border-radius:99px;cursor:pointer;transition:.2s}
+.filters button:hover{color:var(--ink);border-color:rgba(242,180,90,.5)}
+.filters button.on{background:var(--gold);color:#1a1205;border-color:var(--gold);font-weight:600}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.card{position:relative;background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;transition:transform .3s,border-color .3s,box-shadow .3s}
+.card:before{content:"";position:absolute;inset:0;background:radial-gradient(420px circle at var(--mx,50%) var(--my,0%),rgba(242,180,90,.10),transparent 60%);opacity:0;transition:opacity .3s;pointer-events:none}
+.card:hover{transform:translateY(-5px);border-color:rgba(242,180,90,.4);box-shadow:0 24px 50px -24px rgba(0,0,0,.7)}
+.card:hover:before{opacity:1}
+.card.wide,.card.span2{grid-column:1/-1}
+.card.hide{display:none}
+.card.show{animation:pop .45s both}
+@keyframes pop{from{opacity:0;transform:translateY(14px) scale(.98)}to{opacity:1;transform:none}}
+.th{height:96px;position:relative;overflow:hidden;border-bottom:1px solid var(--line);background:var(--card2)}
+.card.wide .th{height:120px}
+.t-heat{background:radial-gradient(circle at 22% 60%,rgba(255,90,70,.75),transparent 28%),radial-gradient(circle at 58% 35%,rgba(242,180,90,.7),transparent 26%),radial-gradient(circle at 82% 65%,rgba(255,120,60,.55),transparent 24%),repeating-linear-gradient(0deg,rgba(255,255,255,.04) 0 1px,transparent 1px 12px),repeating-linear-gradient(90deg,rgba(255,255,255,.04) 0 1px,transparent 1px 12px),#15264a;animation:drift 9s ease-in-out infinite alternate;background-size:140% 140%,140% 140%,140% 140%,auto,auto,auto}
+@keyframes drift{to{background-position:12% 8%,-8% 6%,6% -10%,0 0,0 0,0 0}}
+.t-bayer{background:#15264a}
+.t-bayer i{position:absolute;inset:0;background:
+ linear-gradient(90deg,rgba(224,80,80,.85) 50%,transparent 0) 0 0/28px 28px,
+ linear-gradient(90deg,transparent 50%,rgba(80,200,120,.8) 0) 0 0/28px 28px,
+ linear-gradient(90deg,rgba(80,200,120,.8) 50%,transparent 0) 0 14px/28px 28px,
+ linear-gradient(90deg,transparent 50%,rgba(92,140,240,.85) 0) 0 14px/28px 28px;opacity:.55;-webkit-mask:linear-gradient(90deg,transparent,#000 35%,#000 65%,transparent);mask:linear-gradient(90deg,transparent,#000 35%,#000 65%,transparent)}
+.th svg{position:absolute;inset:0;width:100%;height:100%}
+.t-lines{background:#15264a}
+.t-lines i{position:absolute;left:8%;height:7px;border-radius:4px;background:rgba(174,185,211,.28)}
+.t-lines i:nth-child(1){top:22px;width:46%}.t-lines i:nth-child(2){top:40px;width:64%}.t-lines i:nth-child(3){top:58px;width:38%}
+.t-lines u{position:absolute;right:9%;top:50%;transform:translateY(-50%);width:62px;height:62px;border-radius:50%;border:5px solid rgba(92,200,215,.25);border-top-color:var(--cyan);animation:spin 3.4s linear infinite}
+.t-land{background:linear-gradient(180deg,#2a4a8a 0 45%,#3b6a5a 45% 70%,#1d3a33 70%)}
+.t-land i{position:absolute;left:0;right:0;bottom:30%;height:46px;background:#17294d;clip-path:polygon(0 100%,12% 40%,22% 70%,36% 18%,50% 66%,64% 30%,78% 72%,90% 36%,100% 100%)}
+.t-land u{position:absolute;top:16px;right:14%;width:22px;height:22px;border-radius:50%;background:var(--gold2);box-shadow:0 0 22px 6px rgba(255,213,150,.45)}
+.badge{position:absolute;top:12px;left:14px;font:600 .68rem var(--sans);letter-spacing:.08em;text-transform:uppercase;background:rgba(10,18,36,.72);backdrop-filter:blur(6px);border:1px solid var(--line);padding:4px 10px;border-radius:99px;color:var(--gold2);z-index:2}
+.body{padding:24px 26px 26px;display:flex;flex-direction:column;flex:1;position:relative}
+.meta{font:500 .78rem var(--sans);color:var(--faint);margin-bottom:8px}
+.card h3{font-size:1.3rem;margin-bottom:10px}
+.card.wide h3{font-size:1.6rem}
+.pb{font-size:.95rem;margin-bottom:18px}
+dl{display:grid;gap:11px;margin-bottom:20px}
+.card.wide dl{grid-template-columns:1fr 1fr;gap:14px 28px}
+dl div{border-left:2px solid rgba(242,180,90,.4);padding-left:13px}
+dt{font:600 .68rem var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:2px}
+dd{font-size:.88rem;color:var(--soft);line-height:1.55}
+dd b{color:var(--ink);font-weight:600}
+.card.wide dl .res,.card.wide dl .mt{grid-column:1/-1}
+.stack{display:flex;flex-wrap:wrap;gap:7px;margin-top:auto}
+.stack li{font:500 .74rem var(--sans);color:var(--soft);background:rgba(255,255,255,.05);border:1px solid var(--line);border-radius:8px;padding:4px 10px}
+.lk{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.lk a{font:600 .85rem var(--sans);color:var(--gold2);border:1px solid rgba(242,180,90,.4);padding:8px 15px;border-radius:10px;transition:.2s}
+.lk a:hover{background:var(--gold);color:#1a1205}
+@media(max-width:820px){.grid{grid-template-columns:1fr}.card.wide dl{grid-template-columns:1fr}.card.wide h3{font-size:1.4rem}}
+
+/* SKILLS */
+.sk{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.sg{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:26px}
+.sg h3{font-size:1.05rem;margin-bottom:16px;display:flex;align-items:center;gap:10px}
+.sg h3:before{content:"";width:9px;height:9px;border-radius:3px;background:var(--gold)}
+.sg:nth-child(2) h3:before{background:var(--cyan)}.sg:nth-child(3) h3:before{background:var(--violet)}.sg:nth-child(4) h3:before{background:#4ade80}
+.sg ul{display:flex;flex-wrap:wrap;gap:8px}
+.sg li{font:500 .84rem var(--sans);color:var(--soft);background:rgba(255,255,255,.05);border:1px solid var(--line);padding:5px 12px;border-radius:9px;transition:.2s}
+.sg li:hover{color:var(--ink);border-color:rgba(242,180,90,.5);transform:translateY(-2px)}
+.lng{margin-top:22px;font-size:.92rem;color:var(--faint)}
+@media(max-width:760px){.sk{grid-template-columns:1fr}}
+
+/* CONTACT */
+.ct{text-align:center;max-width:720px;margin:0 auto}
+.ct .k{justify-content:center}
+.ct p{margin:0 auto 34px;max-width:560px;font-size:1.05rem}
+.big{display:inline-block;font:700 clamp(1.15rem,3.6vw,2rem) var(--disp);color:var(--ink);border-bottom:2px solid var(--gold);padding-bottom:4px;margin-bottom:34px;word-break:break-all;transition:.2s}
+.big:hover{color:var(--gold2)}
+.ct .cta{justify-content:center}
+footer{border-top:1px solid var(--line);padding:26px 0;color:var(--faint);font-size:.85rem}
+footer .w{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+footer a:hover{color:var(--gold2)}
+
+/* REVEAL */
+.js .rv{opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s)}
+.js .rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){
+  *,*:before{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .js .rv{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+<nav>
+  <div class="w">
+    <a href="#top" class="logo" aria-label="Moussa Diallo"><i>MD</i>Moussa Diallo</a>
+    <div class="links" id="links">
+      <a href="#projets"><span class="fr">Projets</span><span class="en">Projects</span></a>
+      <a href="#apropos"><span class="fr">À propos</span><span class="en">About</span></a>
+      <a href="#competences"><span class="fr">Compétences</span><span class="en">Skills</span></a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="tools">
+      <div class="lang" role="group" aria-label="Langue / Language">
+        <button type="button" data-l="fr" aria-pressed="true">FR</button>
+        <button type="button" data-l="en" aria-pressed="false">EN</button>
+      </div>
+      <button id="burger" type="button" aria-label="Menu" aria-expanded="false">☰</button>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <canvas id="net" aria-hidden="true"></canvas>
+  <div class="w hg">
+    <div>
+      <div class="chip rv"><span class="dot"></span>
+        <span class="fr">Ouvert aux opportunités · industrie &amp; recherche</span>
+        <span class="en">Open to opportunities · industry &amp; research</span>
+      </div>
+      <p class="eyebrow rv" style="--d:.05s"><span class="fr">Mathématiques appliquées · Data Science · IA</span><span class="en">Applied Mathematics · Data Science · AI</span></p>
+      <h1 class="rv" style="--d:.1s">Moussa <span>Diallo</span></h1>
+      <div class="role rv" style="--d:.15s" aria-live="off"><b>→</b> <span id="typed"></span><span class="caret"></span></div>
+      <p class="sub rv" style="--d:.2s">
+        <span class="fr">Je transforme des données complexes en modèles fiables et compréhensibles, de la collecte à l'interprétation. Une approche ancrée dans les mathématiques appliquées, au service de l'industrie comme de la recherche.</span>
+        <span class="en">I turn complex data into reliable, understandable models, from collection to interpretation. An approach rooted in applied mathematics, serving both industry and research.</span>
+      </p>
+      <div class="cta rv" style="--d:.25s">
+        <a class="btn p" href="#projets"><span class="fr">Voir mes projets</span><span class="en">View my projects</span> →</a>
+        <a class="btn g" href="#contact"><span class="fr">Me contacter</span><span class="en">Get in touch</span></a>
+      </div>
+      <div class="soc rv" style="--d:.3s">
+        <a href="https://github.com/dialloalassane052001-ui" target="_blank" rel="noopener">GitHub ↗</a>
+        <a href="https://www.linkedin.com/in/moussa-diallo-b203473a2/" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <a href="mailto:diallomoussa052001@gmail.com">Email</a>
+      </div>
+    </div>
+    <div class="ph rv" style="--d:.2s">
+      <div class="halo"></div><div class="ring"></div>
+      <img src="photo.jpg" width="600" height="600" alt="Portrait de Moussa Diallo" fetchpriority="high">
+      <div class="fl f1"><em>R² 0,76</em><small><span class="fr">XGBoost · matériaux</span><span class="en">XGBoost · materials</span></small></div>
+      <div class="fl f2"><span>Grad-CAM</span></div>
+      <div class="fl f3"><span>PyTorch</span></div>
+    </div>
+  </div>
+</header>
+
+<div class="w strip">
+  <div class="stats rv">
+    <div class="st"><b class="num" data-to="388">0</b><span class="fr">articles scientifiques collectés</span><span class="en">scientific papers collected</span></div>
+    <div class="st"><b class="num" data-to="2297">0</b><span class="fr">formulations structurées</span><span class="en">mix designs structured</span></div>
+    <div class="st"><b class="num" data-to="483">0</b><span class="fr">images de microstructure</span><span class="en">microstructure images</span></div>
+    <div class="st"><b class="num" data-to="0.76" data-dec="2" data-pre="R² ">0</b><span class="fr">meilleur modèle (XGBoost)</span><span class="en">best model (XGBoost)</span></div>
+  </div>
+</div>
+
+<section id="projets">
+  <div class="w">
+    <div class="k rv"><span class="fr">Projets</span><span class="en">Projects</span></div>
+    <h2 class="rv"><span class="fr">Ce que j'ai construit</span><span class="en">What I've built</span></h2>
+    <p class="lead rv"><span class="fr">Projets de recherche, projets académiques et un projet personnel déployé en ligne. Filtrez par domaine.</span><span class="en">Research projects, academic projects and one personal project deployed online. Filter by topic.</span></p>
+    <div class="filters rv" id="filters">
+      <button class="on" data-f="all"><span class="fr">Tous</span><span class="en">All</span></button>
+      <button data-f="ml">Machine Learning</button>
+      <button data-f="dl">Deep Learning</button>
+      <button data-f="vision">Vision</button>
+      <button data-f="xai"><span class="fr">IA explicable</span><span class="en">Explainable AI</span></button>
+      <button data-f="sci"><span class="fr">Calcul scientifique</span><span class="en">Scientific computing</span></button>
+      <button data-f="llm">LLM</button>
+    </div>
+    <div class="grid" id="grid">
+<article class="card rv wide" data-t="ml dl vision xai" style="--d:0.0s"><div class="th t-heat" aria-hidden="true"><span class="badge"><span class="fr">Projet de recherche</span><span class="en">Research project</span></span></div><div class="body"><div class="meta"><span class="fr">Laboratoire L2MGC, CY Cergy Paris Université · 2026</span><span class="en">L2MGC laboratory, CY Cergy Paris Université · 2026</span></div><h3><span class="fr">Prédiction de la résistance mécanique des matériaux cimentaires par IA multimodale</span><span class="en">Predicting the mechanical strength of cementitious materials with multimodal AI</span></h3><dl><div><dt><span class="fr">Problème</span><span class="en">Problem</span></dt><dd><span class="fr">Prédire la résistance mécanique (en MPa) à partir de la formulation du matériau et d'images de sa microstructure.</span><span class="en">Predict mechanical strength (in MPa) from the material's mix design and images of its microstructure.</span></dd></div><div><dt><span class="fr">Données</span><span class="en">Data</span></dt><dd><span class="fr">Corpus de <b>388 articles</b> scientifiques, <b>2 297 formulations</b> (43 variables) et <b>483 images</b> MEB/BSE.</span><span class="en">Corpus of <b>388 scientific papers</b>, <b>2,297 mix designs</b> (43 variables) and <b>483 SEM/BSE images</b>.</span></dd></div><div class="mt"><dt><span class="fr">Méthodes</span><span class="en">Methods</span></dt><dd><span class="fr">Collecte automatisée (CrossRef, BeautifulSoup, Selenium), nettoyage, segmentation multi-Otsu, texture GLCM, association image–formulation (<b>+86 %</b> de données exploitables). Comparaison de 6 approches : XGBoost, Random Forest, MLP, ResNet18, fusion multimodale. Analyse par Grad-CAM et <span style="white-space:nowrap">t-SNE</span>.</span><span class="en">Automated collection (CrossRef, BeautifulSoup, Selenium), cleaning, multi-Otsu segmentation, GLCM texture, image–mix matching (<b>+86%</b> usable data). Comparison of 6 approaches: XGBoost, Random Forest, MLP, ResNet18, multimodal fusion. Analysis with Grad-CAM and <span style="white-space:nowrap">t-SNE</span>.</span></dd></div><div class="res"><dt><span class="fr">Résultats</span><span class="en">Results</span></dt><dd><span class="fr">Meilleur modèle : <b>XGBoost, R² = 0,76 et MAE &lt; 10 MPa</b>. Résultats restitués aux chercheurs du laboratoire.</span><span class="en">Best model: <b>XGBoost, R² = 0.76 and MAE &lt; 10 MPa</b>. Results presented to the laboratory researchers.</span></dd></div></dl><ul class="stack"><li>Python</li><li>pandas</li><li>scikit-learn</li><li>XGBoost</li><li>PyTorch</li><li>OpenCV</li><li>Git</li></ul></div></article>
+<article class="card rv wide" data-t="dl vision xai" style="--d:0.08s"><div class="th"><svg viewBox="0 0 400 120" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><g stroke="rgba(140,170,230,.35)" stroke-width="1"><line x1="60" y1="30" x2="160" y2="20"/><line x1="60" y1="30" x2="160" y2="50"/><line x1="60" y1="30" x2="160" y2="80"/><line x1="60" y1="30" x2="160" y2="105"/><line x1="60" y1="60" x2="160" y2="20"/><line x1="60" y1="60" x2="160" y2="50"/><line x1="60" y1="60" x2="160" y2="80"/><line x1="60" y1="60" x2="160" y2="105"/><line x1="60" y1="90" x2="160" y2="20"/><line x1="60" y1="90" x2="160" y2="50"/><line x1="60" y1="90" x2="160" y2="80"/><line x1="60" y1="90" x2="160" y2="105"/><line x1="160" y1="20" x2="260" y2="20"/><line x1="160" y1="20" x2="260" y2="50"/><line x1="160" y1="20" x2="260" y2="80"/><line x1="160" y1="20" x2="260" y2="105"/><line x1="160" y1="50" x2="260" y2="20"/><line x1="160" y1="50" x2="260" y2="50"/><line x1="160" y1="50" x2="260" y2="80"/><line x1="160" y1="50" x2="260" y2="105"/><line x1="160" y1="80" x2="260" y2="20"/><line x1="160" y1="80" x2="260" y2="50"/><line x1="160" y1="80" x2="260" y2="80"/><line x1="160" y1="80" x2="260" y2="105"/><line x1="160" y1="105" x2="260" y2="20"/><line x1="160" y1="105" x2="260" y2="50"/><line x1="160" y1="105" x2="260" y2="80"/><line x1="160" y1="105" x2="260" y2="105"/><line x1="260" y1="20" x2="350" y2="45"/><line x1="260" y1="20" x2="350" y2="75"/><line x1="260" y1="50" x2="350" y2="45"/><line x1="260" y1="50" x2="350" y2="75"/><line x1="260" y1="80" x2="350" y2="45"/><line x1="260" y1="80" x2="350" y2="75"/><line x1="260" y1="105" x2="350" y2="45"/><line x1="260" y1="105" x2="350" y2="75"/></g><circle cx="60" cy="30" r="5" fill="#8fb0f0"><animate attributeName="opacity" values=".5;1;.5" dur="2s" repeatCount="indefinite"/></circle><circle cx="60" cy="60" r="5" fill="#8fb0f0"><animate attributeName="opacity" values=".5;1;.5" dur="2s" repeatCount="indefinite"/></circle><circle cx="60" cy="90" r="5" fill="#8fb0f0"><animate attributeName="opacity" values=".5;1;.5" dur="2s" repeatCount="indefinite"/></circle><circle cx="160" cy="20" r="5" fill="#8fb0f0"><animate attributeName="opacity" values=".5;1;.5" dur="4s" repeatCount="indefinite"/></circle><circle cx="160" cy="50" r="5" fill="#8fb0f0"><animate attributeName="opacity" values=".5;1;.5" dur="4s" repeatCount="indefinite"/></circle><circle cx="160" cy="80" r="5" fill="#8fb0f0"><animate attributeName="opacity" values=".5;1;.5" dur="4s" repeatCount="indefinite"/></circle><circle cx="160" cy="105" r="5" fill="#8fb0f0"><animate attributeName="opacity" values=".5;1;.5" dur="2s" repeatCount="indefinite"/></circle><circle cx="260" cy="20" r="5" fill="#8fb0f0"><animate attributeName="opacity" values=".5;1;.5" dur="4s" repeatCount="indefinite"/></circle><circle cx="260" cy="50" r="5" fill="#8fb0f0"><animate attributeName="opacity" values=".5;1;.5" dur="4s" repeatCount="indefinite"/></circle><circle cx="260" cy="80" r="5" fill="#8fb0f0"><animate attributeName="opacity" values=".5;1;.5" dur="4s" repeatCount="indefinite"/></circle><circle cx="260" cy="105" r="5" fill="#8fb0f0"><animate attributeName="opacity" values=".5;1;.5" dur="2s" repeatCount="indefinite"/></circle><circle cx="350" cy="45" r="5" fill="#f2b45a"><animate attributeName="opacity" values=".5;1;.5" dur="2s" repeatCount="indefinite"/></circle><circle cx="350" cy="75" r="5" fill="#f2b45a"><animate attributeName="opacity" values=".5;1;.5" dur="2s" repeatCount="indefinite"/></circle></svg><span class="badge"><span class="fr">Projet de recherche</span><span class="en">Research project</span></span></div><div class="body"><div class="meta"><span class="fr">Laboratoire IRIT, Toulouse · 2025</span><span class="en">IRIT laboratory, Toulouse · 2025</span></div><h3><span class="fr">Visualisation et explicabilité des réseaux de neurones</span><span class="en">Visualising and explaining neural networks</span></h3><dl><div><dt><span class="fr">Problème</span><span class="en">Problem</span></dt><dd><span class="fr">Rendre visible ce que font les réseaux, du perceptron au CNN, et comprendre sur quoi s'appuie un ResNet18 pour décider.</span><span class="en">Make visible what networks do, from the perceptron to the CNN, and understand what a ResNet18 relies on to decide.</span></dd></div><div><dt><span class="fr">Données</span><span class="en">Data</span></dt><dd><span class="fr">Jeux de classification, images et un jeu de données avec <b>indice parasite contrôlé</b> pour tester l'explicabilité.</span><span class="en">Classification datasets, images and a dataset with a <b>controlled spurious cue</b> to test explainability.</span></dd></div><div class="mt"><dt><span class="fr">Méthodes</span><span class="en">Methods</span></dt><dd><span class="fr">Frontières de décision et courbes de perte/précision d'un MLP (PyTorch), filtres et cartes d'activation des CNN, reconstruction d'image par MLP, Grad-CAM sur ResNet18, importance des filtres par ablation et analyse activation/gradient.</span><span class="en">Decision boundaries and loss/accuracy curves of an MLP (PyTorch), CNN filters and activation maps, image reconstruction with MLPs, Grad-CAM on ResNet18, filter importance via ablation and activation/gradient analysis.</span></dd></div><div class="res"><dt><span class="fr">Résultats</span><span class="en">Results</span></dt><dd><span class="fr">Outils Python réutilisables et documentés sous Git, et <b>tableau de bord interactif</b> pour suivre l'apprentissage et explorer les cartes Grad-CAM.</span><span class="en">Reusable, documented Python tools under Git, and an <b>interactive dashboard</b> to follow training and explore Grad-CAM maps.</span></dd></div></dl><ul class="stack"><li>Python</li><li>PyTorch</li><li>NumPy</li><li>Matplotlib</li><li>Jupyter</li><li>Git</li></ul></div></article>
+<article class="card rv" data-t="llm ml" style="--d:0.0s"><div class="th t-lines" aria-hidden="true"><i></i><i></i><i></i><u></u><span class="badge"><span class="fr">Projet personnel</span><span class="en">Personal project</span></span></div><div class="body"><div class="meta"><span class="fr">2026 · déployé en ligne</span><span class="en">2026 · deployed online</span></div><h3><span class="fr">Agent IA de candidature</span><span class="en">AI job-application agent</span></h3><dl><div><dt><span class="fr">Problème</span><span class="en">Problem</span></dt><dd><span class="fr">Évaluer rapidement l'adéquation entre une offre d'emploi et un CV.</span><span class="en">Quickly assess how well a CV matches a job offer.</span></dd></div><div><dt><span class="fr">Données</span><span class="en">Data</span></dt><dd><span class="fr">Offres d'emploi et CV en texte.</span><span class="en">Job offers and CVs as text.</span></dd></div><div class="mt"><dt><span class="fr">Méthodes</span><span class="en">Methods</span></dt><dd><span class="fr">Analyse sémantique par LLM (API Gemini), score de correspondance, rédaction d'une lettre de motivation. Application Streamlit et interface CLI.</span><span class="en">LLM-based semantic analysis (Gemini API), matching score, cover-letter drafting. Streamlit app and CLI.</span></dd></div><div class="res"><dt><span class="fr">Résultats</span><span class="en">Results</span></dt><dd><span class="fr">Application <b>déployée sur Streamlit Cloud</b>.</span><span class="en">Application <b>deployed on Streamlit Cloud</b>.</span></dd></div></dl><ul class="stack"><li>Python</li><li>Streamlit</li><li>Gemini API</li><li>Pydantic</li><li>BeautifulSoup</li></ul><div class="lk"><a href="https://agent-candidature-yyuorcs4n8cfe7cwynrmmp.streamlit.app/" target="_blank" rel="noopener"><span class="fr">Démo en ligne ↗</span><span class="en">Live demo ↗</span></a><a href="https://github.com/dialloalassane052001-ui/agent-candidature" target="_blank" rel="noopener"><span class="fr">Code source ↗</span><span class="en">Source code ↗</span></a></div></div></article>
+<article class="card rv" data-t="dl vision xai" style="--d:0.08s"><div class="th t-heat" aria-hidden="true"><span class="badge"><span class="fr">Projet d'équipe</span><span class="en">Team project</span></span></div><div class="body"><div class="meta"><span class="fr">Université de Toulouse</span><span class="en">University of Toulouse</span></div><h3><span class="fr">Classification d'images et explicabilité</span><span class="en">Image classification and explainability</span></h3><dl><div><dt><span class="fr">Problème</span><span class="en">Problem</span></dt><dd><span class="fr">Classer des images et vérifier ce que le réseau regarde réellement.</span><span class="en">Classify images and check what the network actually looks at.</span></dd></div><div><dt><span class="fr">Données</span><span class="en">Data</span></dt><dd><span class="fr">MNIST et Muffin vs Chihuahua.</span><span class="en">MNIST and Muffin vs Chihuahua.</span></dd></div><div class="mt"><dt><span class="fr">Méthodes</span><span class="en">Methods</span></dt><dd><span class="fr">Classifieurs CNN et ResNet (PyTorch), analyse Grad-CAM selon la complexité des données.</span><span class="en">CNN and ResNet classifiers (PyTorch), Grad-CAM analysis depending on data complexity.</span></dd></div><div class="res"><dt><span class="fr">Résultats</span><span class="en">Results</span></dt><dd><span class="fr">Étude comparative des décisions via les cartes Grad-CAM.</span><span class="en">Comparative study of decisions through Grad-CAM maps.</span></dd></div></dl><ul class="stack"><li>Python</li><li>PyTorch</li><li>Grad-CAM</li></ul></div></article>
+<article class="card rv" data-t="dl vision" style="--d:0.0s"><div class="th t-land" aria-hidden="true"><i></i><u></u><span class="badge"><span class="fr">Projet académique</span><span class="en">Academic project</span></span></div><div class="body"><div class="meta"><span class="fr">Université de Toulouse</span><span class="en">University of Toulouse</span></div><h3><span class="fr">Classification de paysages</span><span class="en">Landscape classification</span></h3><dl><div><dt><span class="fr">Problème</span><span class="en">Problem</span></dt><dd><span class="fr">Reconnaître des types de paysages et comparer les stratégies d'entraînement.</span><span class="en">Recognise landscape types and compare training strategies.</span></dd></div><div><dt><span class="fr">Données</span><span class="en">Data</span></dt><dd><span class="fr"><b>4 000 images</b>, <b>7 classes</b>.</span><span class="en"><b>4,000 images</b>, <b>7 classes</b>.</span></dd></div><div class="mt"><dt><span class="fr">Méthodes</span><span class="en">Methods</span></dt><dd><span class="fr">CNN entraîné from scratch, data augmentation, transfer learning ; projection t-SNE des features.</span><span class="en">CNN trained from scratch, data augmentation, transfer learning; t-SNE projection of features.</span></dd></div><div class="res"><dt><span class="fr">Résultats</span><span class="en">Results</span></dt><dd><span class="fr">Comparaison des trois approches d'entraînement.</span><span class="en">Comparison of the three training approaches.</span></dd></div></dl><ul class="stack"><li>Python</li><li>PyTorch</li><li>t-SNE</li></ul></div></article>
+<article class="card rv" data-t="sci vision" style="--d:0.08s"><div class="th t-bayer" aria-hidden="true"><i></i><span class="badge"><span class="fr">Projet académique</span><span class="en">Academic project</span></span></div><div class="body"><div class="meta"><span class="fr">Université de Toulouse · 2025</span><span class="en">University of Toulouse · 2025</span></div><h3><span class="fr">Démosaïcage d'images et analyse sous incertitude</span><span class="en">Image demosaicing and uncertainty analysis</span></h3><dl><div><dt><span class="fr">Problème</span><span class="en">Problem</span></dt><dd><span class="fr">Reconstruire une image couleur à partir d'un filtre de Bayer (problème inverse).</span><span class="en">Reconstruct a colour image from a Bayer filter (inverse problem).</span></dd></div><div><dt><span class="fr">Données</span><span class="en">Data</span></dt><dd><span class="fr">Images couleur re-échantillonnées par un filtre de Bayer.</span><span class="en">Colour images resampled through a Bayer filter.</span></dd></div><div class="mt"><dt><span class="fr">Méthodes</span><span class="en">Methods</span></dt><dd><span class="fr">Optimisation à variation totale, opérateur et adjoint implémentés, étude de convergence, évaluation PSNR/SSIM, robustesse par Monte-Carlo et bootstrap.</span><span class="en">Total-variation optimisation, operator and adjoint implemented, convergence study, PSNR/SSIM evaluation, robustness via Monte Carlo and bootstrap.</span></dd></div><div class="res"><dt><span class="fr">Résultats</span><span class="en">Results</span></dt><dd><span class="fr">Évaluation quantitative (PSNR/SSIM) et analyse de robustesse.</span><span class="en">Quantitative evaluation (PSNR/SSIM) and robustness analysis.</span></dd></div></dl><ul class="stack"><li>Python</li><li>NumPy</li><li>SciPy</li><li>Matplotlib</li></ul></div></article>
+<article class="card rv" data-t="dl sci" style="--d:0.0s"><div class="th"><svg viewBox="0 0 400 96" preserveAspectRatio="none" aria-hidden="true"><path d="M0 60 C25 20 45 90 75 52 S125 14 155 56 S210 92 240 44 S300 10 330 50 S380 70 400 34" fill="none" stroke="#5cc8d7" stroke-width="2.5" stroke-dasharray="520" stroke-dashoffset="520"><animate attributeName="stroke-dashoffset" values="520;0;0;520" keyTimes="0;.5;.85;1" dur="7s" repeatCount="indefinite"/></path><path d="M0 70 C30 50 60 80 90 62 S150 40 180 66 S240 76 270 54 S340 36 400 60" fill="none" stroke="#f2b45a" stroke-width="2" opacity=".7"/></svg><span class="badge"><span class="fr">Projet académique</span><span class="en">Academic project</span></span></div><div class="body"><div class="meta"><span class="fr">Université de Toulouse · 2025</span><span class="en">University of Toulouse · 2025</span></div><h3><span class="fr">Prévision de séries temporelles par deep learning</span><span class="en">Time-series forecasting with deep learning</span></h3><dl><div><dt><span class="fr">Problème</span><span class="en">Problem</span></dt><dd><span class="fr">Prédire l'évolution de séries temporelles et générer des séquences.</span><span class="en">Forecast time series and generate sequences.</span></dd></div><div><dt><span class="fr">Données</span><span class="en">Data</span></dt><dd><span class="fr">Séries temporelles, dont des séries financières.</span><span class="en">Time series, including financial series.</span></dd></div><div class="mt"><dt><span class="fr">Méthodes</span><span class="en">Methods</span></dt><dd><span class="fr">Comparaison de trois architectures récurrentes : RNN, LSTM et GRU (PyTorch).</span><span class="en">Comparison of three recurrent architectures: RNN, LSTM and GRU (PyTorch).</span></dd></div><div class="res"><dt><span class="fr">Résultats</span><span class="en">Results</span></dt><dd><span class="fr">Comparaison des architectures sur la prédiction et la génération.</span><span class="en">Architecture comparison on prediction and generation.</span></dd></div></dl><ul class="stack"><li>Python</li><li>PyTorch</li><li>pandas</li><li>NumPy</li></ul></div></article>
+    </div>
+  </div>
+</section>
+
+<section id="apropos" class="alt">
+  <div class="w ab">
+    <div>
+      <div class="k rv"><span class="fr">À propos</span><span class="en">About</span></div>
+      <h2 class="rv"><span class="fr">Rigueur mathématique, problèmes concrets</span><span class="en">Mathematical rigour, real-world problems</span></h2>
+      <div class="rv">
+        <p class="fr">Formé en mathématiques appliquées à l'Université de Toulouse, j'aime relier la théorie aux problèmes réels : <strong>collecter et structurer des données hétérogènes</strong>, comparer rigoureusement des modèles, puis <strong>comprendre pourquoi</strong> ils prédisent ce qu'ils prédisent.</p>
+        <p class="fr">J'ai travaillé en laboratoire de recherche sur des données scientifiques réelles, des matériaux cimentaires à l'explicabilité des réseaux de neurones. Je m'adapte vite à de nouveaux domaines et je documente ce que je construis.</p>
+        <p class="en">Trained in applied mathematics at the University of Toulouse, I like connecting theory to real problems: <strong>collecting and structuring heterogeneous data</strong>, rigorously comparing models, then <strong>understanding why</strong> they predict what they predict.</p>
+        <p class="en">I have worked in research laboratories on real scientific data, from cementitious materials to neural network explainability. I adapt quickly to new domains and I document what I build.</p>
+      </div>
+    </div>
+    <div class="axes">
+      <div class="ax rv"><i>DS</i><h3>Data Science</h3><p><span class="fr">Nettoyage, feature engineering, modélisation prédictive, évaluation.</span><span class="en">Cleaning, feature engineering, predictive modelling, evaluation.</span></p></div>
+      <div class="ax rv" style="--d:.07s"><i>ML</i><h3>Machine Learning</h3><p><span class="fr">Régression, classification, validation croisée, comparaison de modèles.</span><span class="en">Regression, classification, cross-validation, model comparison.</span></p></div>
+      <div class="ax rv" style="--d:.14s"><i>DL</i><h3><span class="fr">Deep Learning &amp; vision</span><span class="en">Deep Learning &amp; vision</span></h3><p><span class="fr">CNN, ResNet, séries temporelles, traitement d'images.</span><span class="en">CNNs, ResNet, time series, image processing.</span></p></div>
+      <div class="ax rv" style="--d:.21s"><i>XAI</i><h3><span class="fr">IA explicable</span><span class="en">Explainable AI</span></h3><p><span class="fr">Grad-CAM, t-SNE, ablation : rendre les modèles lisibles.</span><span class="en">Grad-CAM, t-SNE, ablation: making models readable.</span></p></div>
+      <div class="ax rv" style="--d:.28s"><i>∑</i><h3><span class="fr">Calcul scientifique</span><span class="en">Scientific computing</span></h3><p><span class="fr">Optimisation, problèmes inverses, Monte-Carlo, incertitudes.</span><span class="en">Optimisation, inverse problems, Monte Carlo, uncertainty.</span></p></div>
+      <div class="ax rv" style="--d:.35s"><i>ETL</i><h3><span class="fr">Données &amp; pipelines</span><span class="en">Data &amp; pipelines</span></h3><p><span class="fr">API, web scraping, structuration, visualisation.</span><span class="en">APIs, web scraping, structuring, visualisation.</span></p></div>
+    </div>
+  </div>
+</section>
+
+<section id="competences">
+  <div class="w">
+    <div class="k rv"><span class="fr">Compétences</span><span class="en">Skills</span></div>
+    <h2 class="rv"><span class="fr">Ma boîte à outils</span><span class="en">My toolbox</span></h2>
+    <p class="lead rv"><span class="fr">Les outils que j'ai réellement utilisés dans mes projets.</span><span class="en">The tools I have actually used in my projects.</span></p>
+    <div class="sk">
+      <div class="sg rv"><h3>Machine Learning</h3><ul><li>scikit-learn</li><li>XGBoost</li><li>Random Forest</li><li>Cross-validation</li><li>Feature engineering</li><li>Hyperparameter tuning</li></ul></div>
+      <div class="sg rv" style="--d:.07s"><h3><span class="fr">Deep Learning &amp; IA explicable</span><span class="en">Deep Learning &amp; Explainable AI</span></h3><ul><li>PyTorch</li><li>CNN · ResNet18</li><li>MLP</li><li>RNN · LSTM · GRU</li><li>Grad-CAM</li><li>t-SNE</li><li>LLM (Gemini API)</li></ul></div>
+      <div class="sg rv" style="--d:.14s"><h3><span class="fr">Données &amp; visualisation</span><span class="en">Data &amp; visualisation</span></h3><ul><li>Python</li><li>pandas</li><li>NumPy</li><li>SciPy</li><li>OpenCV</li><li>Matplotlib</li><li>Streamlit</li><li>SQL (<span class="fr">bases</span><span class="en">basics</span>)</li></ul></div>
+      <div class="sg rv" style="--d:.21s"><h3><span class="fr">Collecte &amp; outils</span><span class="en">Collection &amp; tools</span></h3><ul><li>Web scraping</li><li>BeautifulSoup</li><li>Selenium</li><li>API REST</li><li>Git / GitHub</li><li>Jupyter</li><li>Linux</li><li>MATLAB · C++ · R</li></ul></div>
+    </div>
+    <p class="lng rv"><span class="fr">Langues : français (bilingue) · anglais (B2)</span><span class="en">Languages: French (bilingual) · English (B2)</span></p>
+  </div>
+</section>
+
+<section id="contact" class="alt">
+  <div class="w ct">
+    <div class="k rv"><span class="fr">Contact</span><span class="en">Contact</span></div>
+    <h2 class="rv"><span class="fr">Travaillons ensemble</span><span class="en">Let's work together</span></h2>
+    <p class="rv"><span class="fr">Un poste, un projet de recherche, une collaboration ? Écrivez-moi, je réponds rapidement.</span><span class="en">A position, a research project, a collaboration? Write to me, I reply quickly.</span></p>
+    <a class="big rv" href="mailto:diallomoussa052001@gmail.com">diallomoussa052001@gmail.com</a>
+    <div class="cta rv">
+      <a class="btn p" href="https://www.linkedin.com/in/moussa-diallo-b203473a2/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a class="btn g" href="https://github.com/dialloalassane052001-ui" target="_blank" rel="noopener">GitHub ↗</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="w">
+    <span>© 2026 Moussa Diallo · Toulouse, France</span>
+    <a href="#top"><span class="fr">Haut de page ↑</span><span class="en">Back to top ↑</span></a>
+  </div>
+</footer>
+
+<script>
+(function(){
+var D=document,root=D.documentElement;
+var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+var META={
+ fr:{t:"Moussa Diallo — Data Science, Machine Learning & IA",d:"Portfolio de Moussa Diallo : projets de Data Science, Machine Learning, Deep Learning, vision par ordinateur, IA explicable et calcul scientifique."},
+ en:{t:"Moussa Diallo — Data Science, Machine Learning & AI",d:"Portfolio of Moussa Diallo: Data Science, Machine Learning, Deep Learning, computer vision, explainable AI and scientific computing projects."}
+};
+var ROLES={
+ fr:["Data Science & Machine Learning","Deep Learning & vision par ordinateur","IA explicable (XAI)","Calcul scientifique & modélisation","Analyse et structuration de données"],
+ en:["Data Science & Machine Learning","Deep Learning & computer vision","Explainable AI (XAI)","Scientific computing & modelling","Data analysis & structuring"]
+};
+function lang(){return root.lang==='en'?'en':'fr'}
+
+/* language */
+function fmtAll(){D.querySelectorAll('.num').forEach(function(n){if(n.dataset.done)n.textContent=fmt(n,+n.dataset.to)})}
+function setLang(l){
+  root.lang=l;try{localStorage.setItem('lang',l)}catch(e){}
+  D.title=META[l].t;
+  var m=D.querySelector('meta[name=description]');if(m)m.content=META[l].d;
+  D.querySelectorAll('.lang button').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.l===l)});
+  D.querySelector('.ph img').alt=l==='fr'?'Portrait de Moussa Diallo':'Portrait of Moussa Diallo';
+  fmtAll();typeReset();
+}
+D.querySelectorAll('.lang button').forEach(function(b){b.addEventListener('click',function(){setLang(b.dataset.l)})});
+
+/* menu */
+var burger=D.getElementById('burger'),links=D.getElementById('links');
+burger.addEventListener('click',function(){var o=links.classList.toggle('open');burger.setAttribute('aria-expanded',o)});
+links.addEventListener('click',function(e){if(e.target.closest('a')){links.classList.remove('open');burger.setAttribute('aria-expanded',false)}});
+
+/* typewriter */
+var typed=D.getElementById('typed'),ti=0,tc=0,del=false,tt;
+function tick(){
+  var r=ROLES[lang()],s=r[ti%r.length];
+  if(!del){tc++;typed.textContent=s.slice(0,tc);if(tc===s.length){del=true;tt=setTimeout(tick,1700);return}}
+  else{tc--;typed.textContent=s.slice(0,tc);if(tc===0){del=false;ti++}}
+  tt=setTimeout(tick,del?28:55);
+}
+function typeReset(){clearTimeout(tt);ti=0;tc=0;del=false;if(reduce){typed.textContent=ROLES[lang()][0]}else tick()}
+
+/* counters */
+function fmt(n,v){var d=+(n.dataset.dec||0);return (n.dataset.pre||'')+v.toLocaleString(lang()==='fr'?'fr-FR':'en-US',{minimumFractionDigits:d,maximumFractionDigits:d})}
+function count(n){
+  var to=+n.dataset.to,t0=null,dur=1400;
+  if(reduce){n.textContent=fmt(n,to);n.dataset.done=1;return}
+  function f(ts){if(!t0)t0=ts;var p=Math.min((ts-t0)/dur,1),e=1-Math.pow(1-p,3);n.textContent=fmt(n,to*e);if(p<1)requestAnimationFrame(f);else n.dataset.done=1}
+  requestAnimationFrame(f);
+}
+
+/* reveal + counters */
+var io=new IntersectionObserver(function(es){es.forEach(function(e){
+  if(e.isIntersecting){e.target.classList.add('in');e.target.querySelectorAll&&e.target.querySelectorAll('.num').forEach(function(n){if(!n.dataset.started){n.dataset.started=1;count(n)}});io.unobserve(e.target)}
+})},{threshold:.12});
+D.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+
+/* progress + scroll spy */
+var bar=D.getElementById('bar'),secs=[].slice.call(D.querySelectorAll('section[id]')),navA=[].slice.call(D.querySelectorAll('.links a'));
+function onScroll(){
+  var h=root.scrollHeight-innerHeight;bar.style.transform='scaleX('+(h>0?scrollY/h:0)+')';
+  var cur='';secs.forEach(function(s){if(s.getBoundingClientRect().top<innerHeight*.4)cur=s.id});
+  navA.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+cur)});
+}
+addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+/* project filter */
+var cards=[].slice.call(D.querySelectorAll('.card'));
+function layout(){
+  var vis=cards.filter(function(c){return !c.classList.contains('hide')});
+  vis.forEach(function(c){c.classList.remove('span2')});
+  var norm=vis.filter(function(c){return !c.classList.contains('wide')});
+  if(norm.length%2===1)norm[norm.length-1].classList.add('span2');
+}
+D.getElementById('filters').addEventListener('click',function(e){
+  var b=e.target.closest('button');if(!b)return;
+  D.querySelectorAll('#filters button').forEach(function(x){x.classList.toggle('on',x===b)});
+  var f=b.dataset.f;
+  cards.forEach(function(c){
+    var ok=f==='all'||c.dataset.t.split(' ').indexOf(f)>-1;
+    c.classList.toggle('hide',!ok);
+    c.classList.remove('show');
+    if(ok){void c.offsetWidth;c.classList.add('show')}
+  });
+  layout();
+});
+layout();
+
+/* card spotlight */
+cards.forEach(function(c){c.addEventListener('pointermove',function(e){var r=c.getBoundingClientRect();c.style.setProperty('--mx',(e.clientX-r.left)+'px');c.style.setProperty('--my',(e.clientY-r.top)+'px')})});
+
+/* neural network background */
+var cv=D.getElementById('net'),ctx=cv.getContext('2d'),W=0,H=0,pts=[],mouse={x:-999,y:-999},run=true,raf;
+function size(){
+  var r=cv.parentElement.getBoundingClientRect(),dpr=Math.min(devicePixelRatio||1,2);
+  W=r.width;H=r.height;cv.width=W*dpr;cv.height=H*dpr;ctx.setTransform(dpr,0,0,dpr,0,0);
+  var n=Math.round(Math.min(78,Math.max(26,W*H/15000)));
+  pts=[];for(var i=0;i<n;i++)pts.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.35,vy:(Math.random()-.5)*.35,g:Math.random()<.18});
+  draw();
+}
+function draw(){
+  ctx.clearRect(0,0,W,H);
+  var L=135,i,j,p,q,dx,dy,d;
+  for(i=0;i<pts.length;i++){
+    p=pts[i];
+    if(!reduce){
+      p.x+=p.vx;p.y+=p.vy;
+      if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1;
+      dx=p.x-mouse.x;dy=p.y-mouse.y;d=Math.sqrt(dx*dx+dy*dy);
+      if(d<110&&d>0){p.x+=dx/d*1.2;p.y+=dy/d*1.2}
+    }
+    for(j=i+1;j<pts.length;j++){
+      q=pts[j];dx=p.x-q.x;dy=p.y-q.y;d=dx*dx+dy*dy;
+      if(d<L*L){ctx.strokeStyle='rgba(140,170,230,'+(.20*(1-Math.sqrt(d)/L))+')';ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(p.x,p.y);ctx.lineTo(q.x,q.y);ctx.stroke()}
+    }
+  }
+  for(i=0;i<pts.length;i++){p=pts[i];ctx.fillStyle=p.g?'rgba(242,180,90,.85)':'rgba(150,180,235,.55)';ctx.beginPath();ctx.arc(p.x,p.y,p.g?2.6:1.8,0,6.283);ctx.fill()}
+  if(run&&!reduce)raf=requestAnimationFrame(draw);
+}
+var rt;addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(size,150)});
+D.getElementById('top').addEventListener('pointermove',function(e){var r=cv.getBoundingClientRect();mouse.x=e.clientX-r.left;mouse.y=e.clientY-r.top});
+D.getElementById('top').addEventListener('pointerleave',function(){mouse.x=mouse.y=-999});
+new IntersectionObserver(function(es){var v=es[0].isIntersecting;if(v&&!run){run=true;draw()}else if(!v){run=false;cancelAnimationFrame(raf)}}).observe(D.getElementById('top'));
+size();
+
+setLang(lang());
+})();
+</script>
+</body>
+</html>
